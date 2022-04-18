@@ -20,11 +20,11 @@
 
 ### 3. Time Complexity:
 
-    -> Average case: Aradığımız sayının ortada olması
+    -> Average case: Aradığımız sayının ortada olması = 18, 22
 
-    -> Worst case: Aradığımız sayının sonda olması
+    -> Worst case: Aradığımız sayının sonda olması = 60
 
-    -> Best case: Aradığımız sayının dizinin en başında olması.
+    -> Best case: Aradığımız sayının dizinin en başında olması. = 2
 
 ---
 
