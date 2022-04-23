@@ -2,8 +2,8 @@
 
 ### 1. Dizinin Binary-Search-Tree aşamalarını yazınız.
 
-    -> Root 5'tir.
+    -> Root 6'dır.
 
-    -> Sol tarafında 0, 1, 2, 3, 4 sayıları,
+    -> Sol tarafında 0, 1, 2, 3, 4, 5 sayıları,
 
-    -> Sağ tarafında 6, 7, 8, 9 sayıları bulunur.
+    -> Sağ tarafında 7, 8, 9 sayıları bulunur.
