@@ -1,14 +1,12 @@
-## [22, 27, 16, 2 , 18, 60] -> Insertion Sort
+## [22, 27, 16, 2 , 18, 6] -> Insertion Sort
 
 ### 1. Yukarıda verilen dizinin sort türüne göre aşamalarını yazınız.
 
-    -> 22, 27, 16, 2, 18, 60
-
-    -> 2, 27, 16, 22, 18, 60
-
-    -> 2, 16, 27, 22, 18, 60
-
-    -> 2, 16, 18, 22, 27, 60
+  -> 2, 27, 16, 22, 18, 6
+  
+  -> 2, 6, 16, 22, 18, 27
+  
+  -> 2, 6, 16, 18, 22, 27
 
 ---
 
@@ -20,9 +18,9 @@
 
 ### 3. Time Complexity:
 
-    -> Average case: Aradığımız sayının ortada olması = 18, 22
+    -> Average case: Aradığımız sayının ortada olması = 16, 18
 
-    -> Worst case: Aradığımız sayının sonda olması = 60
+    -> Worst case: Aradığımız sayının sonda olması = 27
 
     -> Best case: Aradığımız sayının dizinin en başında olması. = 2
 
