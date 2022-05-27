@@ -1,0 +1,31 @@
+body {
+    background: url(./assets/bg.png);
+    background-size: cover;
+    width: auto;
+    height: auto;
+}
+
+.neonText {
+    font-size: 4rem; 
+    font-family: Neonderthaw, cursive;
+    color: white;
+    text-shadow:
+      0 0 7px #A91079,
+      0 0 10px #A91079,
+      0 0 21px #A91079,
+      0 0 42px #F806CC,
+      0 0 82px #F806CC,
+      0 0 92px #F806CC,
+      0 0 102px #F806CC,
+      0 0 151px #F806CC;
+  }
+
+  .ownerText {
+    font-size: 24px; 
+    position: fixed; 
+    bottom: 0; 
+    right: 0;
+    margin-right: 50px;
+  }
+
+  
