@@ -11,13 +11,31 @@
 </head>
 
 <body>
-    <div id="liveAlertPlaceholder"></div>
+    <div class="toast-container position-absolute top-0 end-0 p-3">
+        <div id="liveToastFail" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+            <div class="toast-body text-center">
+                Input field cannot be empty.
+            </div>
+        </div>
+
+        <div id="liveToastSuccess" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+            <div class="toast-body text-center">
+                You've successfully added a new todo!
+            </div>
+        </div>
+
+        <div id="liveToastDelete" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+            <div class="toast-body text-center">
+                You've successfully deleted a todo.
+            </div>
+        </div>
+    </div>
     <div class="container">
         <form class="todo_form">
             <h1 class="todo_title">To Do List</h1>
             <div class="todo_div">
                 <input type="text" class="todo_input" placeholder="Add new todo...">
-                <button type="submit" class="todo_btn" id="liveAlertBtn">+</button>
+                <button type="submit" class="todo_btn" id="liveToastBtn">+</button>
             </div>
         </form>
         <div class="todo_container"></div>

@@ -14,29 +14,16 @@ const startConf = () => {
    } 
 }
 
-// alert start ---
-const alertPlaceholder = document.getElementById('liveAlertPlaceholder')
+// toast start ---
+const Toasty = (message) => {
+   
+   const toastLiveExample = document.getElementById(`${message}`)
 
-const alert = (message, type) => {
-  const wrapper = document.createElement('div')
-  wrapper.innerHTML = [
-    `<div class="alert alert-${type} alert-dismissible position-absolute mt-2 me-4 end-0" role="alert">`,
-    `   <div>${message}</div>`,
-    '   <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>',
-    '</div>'
-  ].join('')
-
-  alertPlaceholder.append(wrapper)
+   const toast = new bootstrap.Toast(toastLiveExample)
+    
+   toast.show()    
 }
-
-const alertTrigger = document.getElementById('liveAlertBtn')
-if (alertTrigger) {
-  alertTrigger.addEventListener('click', () => {
-    alert('Input field cannot be empty!', 'danger');
-   })
-}
-
-// alert end ---
+ // toast end 
 
 const addTodo = (e) => {
    e.preventDefault();
@@ -44,7 +31,8 @@ const addTodo = (e) => {
    const inputVal = inputDOM.value;
 
    if (inputDOM.value == '')  { // boş değer girilmeye çalışıyor ise hata veriyoruz
-        return false;
+      Toasty("liveToastFail");
+      return false;
    } else {
 
     const todo = {
@@ -59,7 +47,8 @@ const addTodo = (e) => {
    addHTML(todo);
 
    formDOM.reset();
-     
+   
+   Toasty("liveToastSuccess");
    }
 }
 
@@ -72,6 +61,7 @@ const deleteTodo = (e) => {
    localStorage.setItem("todos", JSON.stringify(todos));
 
    todo.remove();
+   Toasty("liveToastDelete");
 }
 
 const completeTodo = (e) => {
