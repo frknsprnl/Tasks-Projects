@@ -93,6 +93,8 @@ const saveTodo = (e) => {
    todo.firstChild.children[1].textContent = newText;  // HTML üzerindeki değerini de değiştiriyoruz
 
    todo.classList.remove("-edited"); // verdiğimiz classı kaldırıyoruz
+
+   Toasty("liveToastEdit");
 }
 
 const editTodo = (e) => {
