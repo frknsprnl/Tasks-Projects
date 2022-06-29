@@ -14,7 +14,7 @@ const menu = [
       category: "Japan",
       price: 7.99,
       img:
-        "https://www.forkknifeswoon.com/wp-content/uploads/2014/10/simple-homemade-chicken-ramen-fork-knife-swoon-01.jpg",
+        "https://gimmedelicious.com/wp-content/uploads/2021/02/Chicken-Ramen-SQ-500x500.jpg",
       desc: `Chicken noodle soup, serving with vegetables such as soy bean, green onion. In an optional you can ask for egg. `,
     },
     {
@@ -23,7 +23,7 @@ const menu = [
       category: "Korea",
       price: 8.99,
       img:
-        "https://dwellbymichelle.com/wp-content/uploads/2020/05/DWELL-bibimbap.jpg",
+        "https://cdn.loveandlemons.com/wp-content/uploads/2020/03/bibimbap-500x500.jpg",
       desc: `Boiling vegetables, serving with special hot sauce`,
     },
     {
@@ -32,7 +32,7 @@ const menu = [
       category: "China",
       price: 5.99,
       img:
-        "https://www.savingdessert.com/wp-content/uploads/2019/02/Dan-Dan-Noodles-10.jpg",
+        "https://takestwoeggs.com/wp-content/uploads/2022/02/Dan-Dan-Noodles-Dan-Dan-Mian-5overhead-sq-500x500.jpg",
       desc: `Dan dan noodle, serving with green onion `,
     },
     {
@@ -41,7 +41,7 @@ const menu = [
       category: "China",
       price: 12.99,
       img:
-        "https://salu-salo.com/wp-content/uploads/2013/02/Yangzhou-Fried-Rice1.jpg",
+        "https://chefjacooks.com/wp-content/uploads/2021/10/natto-chahan-square-500x500.jpg",
       desc: `Yangzhou style fried rice, serving with bean and pickles `,
     },
     {
@@ -50,7 +50,7 @@ const menu = [
       category: "Japan",
       price: 9.99,
       img:
-        "https://www.manusmenu.com/wp-content/uploads/2017/08/Onigiri-3-1-of-1.jpg",
+        "https://www.justonecookbook.com/wp-content/uploads/2017/09/Onigiri-Rice-Balls-3082-500x500.jpg",
       desc: `Rice Sandwich, serving with soy sauce`,
     },
     {
@@ -59,7 +59,7 @@ const menu = [
       category: "Korea",
       price: 15.99,
       img:
-        "https://www.curiouscuisiniere.com/wp-content/uploads/2020/04/Jajangmyeon-Korean-Noodles-in-Black-Bean-Sauce5.1200H-720x540.jpg",
+        "https://www.spoonforkbacon.com/wp-content/uploads/2021/03/Jajangmyeon-recipe-card-500x500.jpg",
       desc: `Black bean sauce noodle, serving with green onion `,
     },
     {
@@ -68,16 +68,16 @@ const menu = [
       category: "China",
       price: 12.99,
       img:
-        "https://assets.tmecosys.com/image/upload/t_web767x639/img/recipe/ras/Assets/F688C2F6-86EC-46C4-B9C7-A6BA01DF7437/Derivates/32E3E72A-F786-406D-AF7F-B30980A9AC6C.jpg",
+        "https://www.ohmyfoodrecipes.com/wp-content/uploads/2020/01/ants-climb-on-the-tree-horiztonal-with-chopsticks-500x500.jpg",
       desc: `Hot pepper sauce noodle, serving with soy bean and onion`,
     },
     {
       id: 9,
-      title: "Doroyaki",
+      title: "Dorayaki",
       category: "Japan",
       price: 3.99,
       img:
-        "https://www.justonecookbook.com/wp-content/uploads/2011/10/Dorayaki-New-500x400.jpg",
+        "https://www.honestfoodtalks.com/wp-content/uploads/2022/02/Dorayaki-recipe-red-bean-500x500.jpg",
       desc: `Red bean paste dessert, serving with honey.`,
     },
   ];
