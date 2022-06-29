@@ -34,6 +34,7 @@ h2 {
 .btn-item {
     margin-left: 15px;
     border: 1px solid black;
+    transition: .3s;
 }
 
 .btn-item:hover {
@@ -42,7 +43,7 @@ h2 {
 }
 
 .photo {
-    width: 40%;
+    width: 30%;
     height: 175px;
     object-fit: cover;
     border: 0.25rem solid black;

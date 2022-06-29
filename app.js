@@ -82,4 +82,73 @@ const menu = [
     },
   ];
 
+// filters
+  const koreaFilter = menu.filter(item => item.category === "Korea");
+  const japanFilter = menu.filter(item => item.category === "Japan");
+  const chinaFilter = menu.filter(item => item.category === "China");
+
+// buttonDOM
+  const btn_ALL = document.querySelector("#all");
+  const btn_Korea = document.querySelector("#korea");
+  const btn_Japan = document.querySelector("#japan");
+  const btn_China = document.querySelector("#china");
+
+  const AddMenu = (filter) => {
+    for (let i = 0; i < filter.length; i++){
+      let item = filter[i];
+      AddHTML(item);
+    }
+  }
+
+  
+  let MENU_DIV = document.querySelector("#menu_div");
+  
+  const AddHTML = (item) => {
+    const menuItems = document.createElement("div");
+    menuItems.classList.add("menu-items", "col-lg-6", "col-sm-12");
+    MENU_DIV.appendChild(menuItems);
+    
+    const menuImg = document.createElement("img");
+    menuImg.classList.add("photo");
+    menuImg.setAttribute("src",`${item.img}`);
+    menuItems.appendChild(menuImg);
+    
+    const menuInfo = document.createElement("div");
+    menuInfo.classList.add("menu-info");
+    menuItems.appendChild(menuInfo);
+    
+    const menuTitle = document.createElement("div");
+    menuTitle.classList.add("menu-title");
+    menuInfo.appendChild(menuTitle);
+    
+    const menuTitle_H4 = document.createElement("h4");
+    menuTitle_H4.textContent = `${item.title}`;
+    menuTitle.appendChild(menuTitle_H4);
+    
+    const menuTitle_Price = document.createElement("h4");
+    menuTitle_Price.classList.add("price");
+    menuTitle_Price.textContent = `${item.price}`;
+    menuTitle.appendChild(menuTitle_Price);
+    
+    const menuText = document.createElement("div");
+    menuText.classList.add("menu-text");
+    menuText.textContent = `${item.desc}`;
+    menuInfo.appendChild(menuText);
+    
+  }
+
+  AddMenu(menu); // first init : default page view 
+  
+  const removeItems = () => {
+    const menuItemsDOM = document.querySelectorAll(".menu-items");
+    menuItemsDOM.forEach( n => n.remove() );
+  }
+
+  btn_ALL.addEventListener('click', function(){removeItems(), AddMenu(menu)});
+  btn_Korea.addEventListener('click', function(){removeItems(), AddMenu(koreaFilter)});
+  btn_Japan.addEventListener('click', function(){removeItems(), AddMenu(japanFilter)});
+  btn_China.addEventListener('click', function(){removeItems(), AddMenu(chinaFilter)});
+
+
+
   
