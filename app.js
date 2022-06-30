@@ -80,6 +80,15 @@ const menu = [
         "https://www.honestfoodtalks.com/wp-content/uploads/2022/02/Dorayaki-recipe-red-bean-500x500.jpg",
       desc: `Red bean paste dessert, serving with honey.`,
     },
+    {
+      id: 10,
+      title: "Kimchi Omurice",
+      category: "Japan",
+      price: 5.99,
+      img:
+        "https://omnivorescookbook.com/wp-content/uploads/2021/07/210712_Kimchi-Omurice_550-500x500.jpg",
+      desc: `fried rice, serving with omelet.`,
+    },
   ];
 
 // filters
