@@ -56,16 +56,27 @@ const getResult = (cityName) => {
 }
 
 const showAlert = () => {
-    const alertPlaceholder = document.getElementById('liveAlertPlaceholder')
-    const wrapper = document.createElement('div');
-    wrapper.innerHTML = [
-        `<div class="alert alert-danger fade show alert-dismissible position-absolute mt-3 me-3 bottom-0 end-0" role="alert">`,
-        `   <div>Wrong city information.</div>`,
-        '   <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>',
-        '</div>'
-    ].join('');
+    let modelWrap = null;
 
-    alertPlaceholder.append(wrapper);
+    if (modelWrap != null) {
+        modelWrap.remove();
+    }
+
+    modelWrap = document.createElement('div');
+    modelWrap.innerHTML = `
+    <div class="modal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <p class="text-center py-3">Wrong city information.</p>
+                </div>
+            </div>
+        </div>
+    </div>`;
+    document.body.append(modelWrap);
+
+    let modal = new bootstrap.Modal(modelWrap.querySelector('.modal'));
+    modal.show();
 }
 
 const displayResult = (result) => {
@@ -75,6 +86,7 @@ const displayResult = (result) => {
     try {
         bodyDOM.style.backgroundImage = `url(./assets/${result.weather[0].main}.jpg)`;
     } catch (error) {
+        if (!bodyDOM.style.backgroundImage)
         bodyDOM.style.backgroundImage = `url(./assets/default.jpg)`;
     }   
 
