@@ -84,7 +84,12 @@ const displayResult = (result) => {
     
     const bodyDOM = document.querySelector("body");
     try {
-        bodyDOM.style.backgroundImage = `url(./assets/${result.weather[0].main}.jpg)`;
+        const arrFog = ["Mist", "Fog", "Dust", "Haze", "Smoke"];
+        if((arrFog).includes(result.weather[0].main)){
+            bodyDOM.style.backgroundImage = `url(./assets/Fog.jpg)`;
+        } else {
+            bodyDOM.style.backgroundImage = `url(./assets/${result.weather[0].main}.jpg)`;
+        }
     } catch (error) {
         if (!bodyDOM.style.backgroundImage)
         bodyDOM.style.backgroundImage = `url(./assets/default.jpg)`;
