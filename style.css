@@ -7,7 +7,14 @@
 body {
     height: 100vh;
     background: url(./assets/default.jpg) no-repeat;
-    background-size: cover;
+    background-size: contain;
+    background: center;
+}
+
+@media only screen and (max-width: 600px) {
+    body {
+        background-size: cover;
+    }
 }
 
 .app {
