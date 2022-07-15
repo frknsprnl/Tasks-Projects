@@ -1,0 +1,50 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #323232;
+}
+
+.header {
+    color: white;
+    text-align: center;
+
+}
+
+.swiper-wrapper {
+    padding: 40px 0;
+}
+
+.swiper-header {
+    color: white;
+}
+
+.swiper-slide>img {
+    height: 300px;
+    width: 200px;
+}
+
+.swiper-slide {
+    transition: 250ms all;
+}
+
+.swiper-slide:hover {
+    transform: scale(1.2);
+    z-index: 1;
+
+}
+
+.swiper-slide:first-child:hover {
+    margin: 0 0 0 20px;
+}
+
+.swiper-slide:last-child:hover {
+    margin: 0 0 0 -5px;
+}
