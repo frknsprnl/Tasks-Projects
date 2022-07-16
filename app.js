@@ -10,6 +10,7 @@ getData = (searchValue) => {
     swiperFunc(data.Search);
   })
 }
+
 // adds swiper and swiper contents
 const swiperFunc = (info) => {
   resetSliders();
@@ -40,7 +41,7 @@ inputDOM.addEventListener('keydown', function(e) {
   
   if (e.key == "Enter") {
 
-    if (inputDOM.value && /^([0-9]*[a-zA-Z]){3,}[0-9]*$/.test(inputDOM.value)) {
+    if (inputDOM.value && /\d*(?:[a-zA-Z]){3,}\d*/.test(inputDOM.value)) {
       getData(inputDOM.value);
       inputDOM.value = "";
     } else {
@@ -67,8 +68,8 @@ const showAlert = (message) => {
   <div class="modal" tabindex="-1">
       <div class="modal-dialog modal-dialog-centered modal-sm">
           <div class="modal-content">
-              <div class="modal-header bg-danger text-white fw-bold">
-                  <p>Error</p>
+              <div class="modal-header bg-danger text-white fw-semibold">
+                  <p>E r r o r !</p>
               </div>
               <div class="modal-body">
                   <p class="text-center py-2">${message}</p>
