@@ -18,27 +18,45 @@ body {
 
 }
 
+.inputDiv {
+    margin-top: 40px;
+    text-align: center;
+}
+
+input {
+    border-radius: 8px;
+    padding: 6px 16px;
+    width: 20em;
+    font-size: 16px;
+    outline: none;
+}
+
+
 .swiper-wrapper {
     padding: 40px 0;
+    gap: 1em;
 }
 
 .swiper-header {
     color: white;
+
 }
 
 .swiper-slide>img {
     height: 300px;
     width: 200px;
+    user-select: none;
+    border-radius: 12px;
 }
 
 .swiper-slide {
+    flex-shrink: 100 !important;
     transition: 250ms all;
 }
 
 .swiper-slide:hover {
     transform: scale(1.2);
     z-index: 1;
-
 }
 
 .swiper-slide:first-child:hover {
@@ -46,5 +64,5 @@ body {
 }
 
 .swiper-slide:last-child:hover {
-    margin: 0 0 0 -5px;
+    margin: 0 0 0 -20px;
 }

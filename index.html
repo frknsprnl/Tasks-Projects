@@ -5,38 +5,49 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Movie App</title>
+    <title>Find That Movie</title>
     <!-- CSS only -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
 
     <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+        crossorigin="anonymous"></script>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <div class="container mt-5">
-        <!-- Slider main container -->
-        <h1 class="header">Movie App</h1>
-        <div class="swiper">
-            <!-- Additional required wrapper -->
-
-            <div class="swiper-wrapper">
-                <!-- Slides -->
-            </div>
-
-            <!-- If we need navigation buttons -->
-            <div class="swiper-button-prev"></div>
-            <div class="swiper-button-next"></div>
-
+    <div class="app mt-5">
+        <h1 class="header">Find That Movie</h1>
+        <h4 class="text-secondary text-center mt-4">Give me a word from that movie's name!</h4>
+        <div class="inputDiv">
+            <input type="text" id="search" placeholder="Search...">
         </div>
+        <div class="container">
+            <!-- Slider main container -->
+            <h4 class="swiper-header"></h4>
+            <div class="swiper">
+                <!-- Additional required wrapper -->
+
+                <div class="swiper-wrapper">
+                    <!-- Slides -->
+                </div>
+
+                <!-- If we need navigation buttons -->
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+
+            </div>
+        </div>
+
     </div>
 
     <script src="app.js"></script>
     <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
     <script>
-        var swiper = new Swiper('.swiper', {
+        let swiper = new Swiper('.swiper', {
             slidesPerView: 6,
             slidesPerGroup: 2,
             pagination: {
