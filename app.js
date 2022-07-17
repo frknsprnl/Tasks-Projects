@@ -41,7 +41,7 @@ inputDOM.addEventListener('keydown', function(e) {
   
   if (e.key == "Enter") {
 
-    if (inputDOM.value && /\d*(?:[a-zA-Z]){3,}\d*/.test(inputDOM.value)) {
+    if (inputDOM.value && /\d*(?:[a-zA-Z]||[0,9]){3,}\d*/.test(inputDOM.value)) {
       getData(inputDOM.value);
       inputDOM.value = "";
     } else {
