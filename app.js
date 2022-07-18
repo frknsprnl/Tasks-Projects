@@ -7,17 +7,21 @@ getData = (searchValue) => {
     return response.json();
   })
   .then(data => {
-    swiperFunc(data.Search);
+    try {
+      swiperFunc(data.Search);
+    } catch (error) {
+      showAlert(apiErr);
+    }
   })
 }
 
 // adds swiper and swiper contents
 const swiperFunc = (info) => {
+  const swiperWrapperDOM = document.querySelector('.swiper-wrapper');
   resetSliders();
   
   for( let data of info) {
     if (data.Poster != "N/A") {
-      const swiperWrapperDOM = document.querySelector('.swiper-wrapper');
       const swiperSliderDOM = document.createElement('div');
       swiperSliderDOM.classList.add("swiper-slide");
       swiperSliderDOM.innerHTML = `<img class="slider-img" src="${data.Poster}" alt="">`;
@@ -27,7 +31,9 @@ const swiperFunc = (info) => {
       swiperWrapperDOM.append(swiperSliderDOM);
     }
   }
-
+  if (swiperWrapperDOM.childNodes.length == 0) {
+    showAlert(apiErr);
+  }
   console.log("You can check the api result here for more: ");
   console.log(info);
   
@@ -37,10 +43,43 @@ const swiperFunc = (info) => {
 
 // error messages
 const emptyErr = "Input field cannot be empty. <br> There must be at least 3 characters.";
-const apiErr = "Wrong movie/series information.";
+const apiErr = "Sorry, we didn't find this in our database.";
 
 // search 
 const inputDOM = document.querySelector("#search");
+
+// for converting turkish characters to english characters like ş to s or ö to o || realtime
+inputDOM.addEventListener('keyup', function() {
+  var charMap = {
+    Ç: 'C',
+    Ö: 'O',
+    Ş: 'S',
+    İ: 'I',
+    I: 'i',
+    Ü: 'U',
+    Ğ: 'G',
+    ç: 'c',
+    ö: 'o',
+    ş: 's',
+    ı: 'i',
+    ü: 'u',
+    ğ: 'g'
+  };
+
+  var str = inputDOM.value;
+
+  str_array = str.split('');
+
+  for (var i = 0, len = str_array.length; i < len; i++) {
+    str_array[i] = charMap[str_array[i]] || str_array[i];
+  }
+
+  str = str_array.join('');
+
+  var clearStr = str.replace(/[çöşüğı]/gi, "");
+
+  inputDOM.value = clearStr;
+});
 
 inputDOM.addEventListener('keydown', function(e) {
   
