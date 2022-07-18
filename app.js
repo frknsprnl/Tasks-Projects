@@ -20,15 +20,20 @@ const swiperFunc = (info) => {
       const swiperWrapperDOM = document.querySelector('.swiper-wrapper');
       const swiperSliderDOM = document.createElement('div');
       swiperSliderDOM.classList.add("swiper-slide");
-      swiperSliderDOM.innerHTML = `<img src="${data.Poster}" alt="">`; 
+      swiperSliderDOM.innerHTML = `<img class="slider-img" src="${data.Poster}" alt="">`;
+      swiperSliderDOM.addEventListener('click', function(){
+        showInfo(`${data.Title}`,`${data.Type}`,`${data.Year}`);
+      })
       swiperWrapperDOM.append(swiperSliderDOM);
     }
   }
-  console.log("Hey! Movies without posters doesn't show on website.");
+
   console.log("You can check the api result here for more: ");
   console.log(info);
   
 }
+
+
 
 // error messages
 const emptyErr = "Input field cannot be empty. <br> There must be at least 3 characters.";
@@ -73,6 +78,33 @@ const showAlert = (message) => {
               </div>
               <div class="modal-body">
                   <p class="text-center py-2">${message}</p>
+              </div>
+          </div>
+      </div>
+  </div>`;
+  document.body.append(modelWrap);
+
+  let modal = new bootstrap.Modal(modelWrap.querySelector('.modal'));
+  modal.show();
+}
+
+const showInfo = (title, type, year) => {
+  let modelWrap = null;
+
+  if (modelWrap != null) {
+      modelWrap.remove();
+  }
+
+  modelWrap = document.createElement('div');
+  modelWrap.innerHTML = `
+  <div class="modal" tabindex="-1">
+      <div class="modal-dialog modal-dialog-centered modal-md">
+          <div class="modal-content">
+              <div class="modal-header bg-success text-white fw-semibold">
+                  <p>${title}</p>
+              </div>
+              <div class="modal-body">
+                  <p class="text-center py-2">Type: ${type} <br> Year: ${year}</p>
               </div>
           </div>
       </div>

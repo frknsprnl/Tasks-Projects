@@ -66,3 +66,7 @@ input {
 .swiper-slide:last-child:hover {
     margin: 0 0 0 -20px;
 }
+
+.modal-header {
+    white-space: nowrap;
+}
