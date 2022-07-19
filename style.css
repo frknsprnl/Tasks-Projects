@@ -56,7 +56,20 @@ input {
 
 .swiper-wrapper {
     padding: 40px 0;
-    gap: 1em;
+    margin: 0 auto;
+}
+
+@media only screen and (min-width: 600px) {
+    .swiper-wrapper {
+        gap: 1em;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .swiper-slide {
+        display: flex;
+        justify-content: center;
+    }
 }
 
 .swiper-header {
@@ -73,8 +86,8 @@ input {
 
 @media only screen and (max-width: 600px) {
     .swiper-slide>img {
-        height: 400px;
-        width: 300px;
+        height: 300px;
+        width: 200px;
     }
 }
 
