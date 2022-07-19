@@ -143,7 +143,7 @@ const showInfo = (title, type, year, poster) => {
                   <p>${title}</p>
               </div>
               <div class="modal-body text-center">
-                  <img src="${poster}"></img>
+                  <img class="modal-img" src="${poster}"></img>
                   <p class="py-2">Type: ${type} <br> Year: ${year}</p>
               </div>
           </div>
