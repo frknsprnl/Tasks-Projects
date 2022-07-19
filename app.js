@@ -2,7 +2,7 @@ const API_KEY = "d51859d6";
 
 // Fetch API
 getData = (searchValue) => {
-  fetch(`http://www.omdbapi.com/?s=${searchValue}&apikey=${API_KEY}`)
+  fetch(`https://www.omdbapi.com/?s=${searchValue}&apikey=${API_KEY}`)
   .then(response => {
     return response.json();
   })
