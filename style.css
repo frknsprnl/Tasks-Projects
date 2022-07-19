@@ -8,9 +8,33 @@ html {
     scroll-behavior: smooth;
 }
 
-body {
-    background-color: #323232;
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
 }
+
+body {
+    background: #0f0c29;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(-45deg, #24243e, #302b63, #0f0c29);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(-45deg, #24243e, #302b63, #0f0c29);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background-size: 400% 400%;
+    animation: gradient 10s ease infinite;
+    font-family: 'Fredoka One', cursive;
+}
+
+
 
 .header {
     color: white;
@@ -69,4 +93,5 @@ input {
 
 .modal-header {
     white-space: nowrap;
+    font-family: 'Changa', sans-serif;
 }

@@ -26,7 +26,7 @@ const swiperFunc = (info) => {
       swiperSliderDOM.classList.add("swiper-slide");
       swiperSliderDOM.innerHTML = `<img class="slider-img" src="${data.Poster}" alt="">`;
       swiperSliderDOM.addEventListener('click', function(){
-        showInfo(`${data.Title}`,`${data.Type}`,`${data.Year}`);
+        showInfo(`${data.Title}`,`${data.Type}`,`${data.Year}`, `${data.Poster}`);
       })
       swiperWrapperDOM.append(swiperSliderDOM);
     }
@@ -127,7 +127,7 @@ const showAlert = (message) => {
   modal.show();
 }
 
-const showInfo = (title, type, year) => {
+const showInfo = (title, type, year, poster) => {
   let modelWrap = null;
 
   if (modelWrap != null) {
@@ -139,11 +139,12 @@ const showInfo = (title, type, year) => {
   <div class="modal" tabindex="-1">
       <div class="modal-dialog modal-dialog-centered modal-md">
           <div class="modal-content">
-              <div class="modal-header bg-success text-white fw-semibold">
+              <div class="modal-header bg-dark text-white fw-semibold">
                   <p>${title}</p>
               </div>
-              <div class="modal-body">
-                  <p class="text-center py-2">Type: ${type} <br> Year: ${year}</p>
+              <div class="modal-body text-center">
+                  <img src="${poster}"></img>
+                  <p class="py-2">Type: ${type} <br> Year: ${year}</p>
               </div>
           </div>
       </div>
