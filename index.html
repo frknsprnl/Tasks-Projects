@@ -30,7 +30,7 @@
         <div class="inputDiv">
             <input type="text" id="search" placeholder="Search...">
         </div>
-        <div class="container">
+        <div class="container d-flex justify-content-center align-items-center">
             <!-- Slider main container -->
             <h4 class="swiper-header"></h4>
             <div class="swiper">
@@ -53,12 +53,21 @@
     <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
     <script>
         let swiper = new Swiper('.swiper', {
-            slidesPerView: 6,
-            slidesPerGroup: 2,
-            pagination: {
-                el: '.swiper-pagination',
-                clickable: true,
+            slidesPerGroup: 1,
+
+            breakpoints: {
+                // when window width is >= 320px
+                320: {
+                    slidesPerView: 1,
+                    centeredSlides: true,
+                    centeredSlidesBounds: true,
+                },
+                // when window width is >= 640px
+                640: {
+                    slidesPerView: 6,
+                }
             },
+
             navigation: {
                 nextEl: '.swiper-button-next',
                 prevEl: '.swiper-button-prev',

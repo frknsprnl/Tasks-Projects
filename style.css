@@ -34,8 +34,6 @@ body {
     font-family: 'Fredoka One', cursive;
 }
 
-
-
 .header {
     color: white;
     text-align: center;
@@ -73,9 +71,18 @@ input {
     border-radius: 12px;
 }
 
-.swiper-slide {
-    flex-shrink: 100 !important;
-    transition: 250ms all;
+@media only screen and (max-width: 600px) {
+    .swiper-slide>img {
+        height: 300px;
+        width: 300px;
+    }
+}
+
+@media only screen and (min-width: 600px) {
+    .swiper-slide {
+        flex-shrink: 100 !important;
+        transition: 250ms all;
+    }
 }
 
 .swiper-slide:hover {
