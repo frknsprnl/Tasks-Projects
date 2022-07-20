@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "start": "node index"
   },
@@ -15,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/frknsprnl/UserPostApp/issues"
   },
-  "homepage": "https://github.com/frknsprnl/UserPostApp#readme"
+  "homepage": "https://github.com/frknsprnl/UserPostApp#readme",
+  "dependencies": {
+    "axios": "^0.27.2"
+  }
 }
