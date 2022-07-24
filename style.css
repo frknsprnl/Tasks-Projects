@@ -2,4 +2,10 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    --main-color: #21252b;
+    --secondary-color: #282c34;
+}
+
+body {
+    background-color: var(--main-color);
 }
