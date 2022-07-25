@@ -12,14 +12,22 @@ body {
     background-color: var(--main-color);
 }
 
-.container {
-    padding: 16px;
+@media only screen and (max-width: 900px) {
+    .container {
+        flex-direction: column;
+    }
 }
 
 .box-container {
     width: 500px;
     height: 300px;
     background-color: var(--secondary-color);
+}
+
+.form-select:focus {
+    border-bottom: 1px solid rgba(255, 255, 255, .1);
+    outline: none;
+    box-shadow: none;
 }
 
 .src-container {
