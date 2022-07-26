@@ -91,9 +91,32 @@ btnTranslateDOM.addEventListener("click", () => {
 // translate method ***end***
 
 // it displays the api response ***start***
+
 const showResult = (text) =>{
   const dst_TextArea = document.querySelector('#dst-textarea')
   dst_TextArea.value = text;
 }
 
 // it displays the api response ***end***
+
+// it swaps btn and textarea values ***start***
+const swapBtnDOM = document.querySelector('.swap-btn')
+
+swapBtnDOM.addEventListener('click', () => {
+  const dst_TextArea = document.querySelector('#dst-textarea')
+  const src_textArea = document.querySelector('#src-textarea')
+  
+  let iter = src_textArea.value
+  src_textArea.value = dst_TextArea.value
+  dst_TextArea.value = iter
+
+  const dst_Btn = document.querySelector('.dst-btn')
+  const src_Btn = document.querySelector('.src-btn')
+
+  let iterBtn = src_Btn.value
+  src_Btn.value = dst_Btn.value
+  dst_Btn.value = iterBtn
+
+})
+
+// it swaps btn and textarea values ***end***
