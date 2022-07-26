@@ -1,3 +1,4 @@
+// sets translate method api response options ***start***
 function setOptions(text, src, dst) {
  return options = {
     method: "POST",
@@ -10,6 +11,9 @@ function setOptions(text, src, dst) {
   };
 }
 
+// sets translate method api response options ***end***
+
+// gets translate response from api ***start***
 const translate = (text, src, dst) => {
   fetch(
     "https://deep-translate1.p.rapidapi.com/language/translate/v2",
@@ -20,11 +24,10 @@ const translate = (text, src, dst) => {
     .catch((err) => console.error(err));
 };
 
-const showResult = (text) =>{
-  const dst_TextArea = document.querySelector('#dst-textarea')
-  dst_TextArea.value = text;
-}
+// gets translate response from api ***end***
 
+
+// gets languages and language codes from api ***start***
 function getLang() {
   const options = {
     method: "GET",
@@ -44,6 +47,11 @@ function getLang() {
 }
 getLang();
 
+// gets languages and language codes from api ***end***
+
+
+// setting language codes / adding them to lang buttons ***start***
+
 const setlangCodes = (resp) => {
   const languages = resp.languages;
 
@@ -58,6 +66,11 @@ const setlangCodes = (resp) => {
     })
   );
 };
+
+// setting language codes / adding them to lang buttons ***end***
+
+
+// translate method ***start***
 
 const btnTranslateDOM = document.querySelector(".translate-btn");
 
@@ -74,3 +87,13 @@ btnTranslateDOM.addEventListener("click", () => {
 
   translate(text, srcVal, dstVal);
 });
+
+// translate method ***end***
+
+// it displays the api response ***start***
+const showResult = (text) =>{
+  const dst_TextArea = document.querySelector('#dst-textarea')
+  dst_TextArea.value = text;
+}
+
+// it displays the api response ***end***
