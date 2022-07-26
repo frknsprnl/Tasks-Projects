@@ -34,10 +34,13 @@ body {
     font-family: 'Fredoka One', cursive;
 }
 
+.app {
+    margin-top: 60px;
+}
+
 .header {
     color: white;
     text-align: center;
-
 }
 
 .inputDiv {
