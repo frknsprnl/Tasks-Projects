@@ -4,7 +4,7 @@ function setOptions(text, src, dst) {
     method: "POST",
     headers: {
       "content-type": "application/json",
-      "X-RapidAPI-Key": "b55bb35b14mshde72d2b82ffcf79p1291c9jsn1276ba10ac26",
+      "X-RapidAPI-Key": `${key}`,
       "X-RapidAPI-Host": "deep-translate1.p.rapidapi.com",
     },
     body: `{"q":"${text}","source":"${src}","target": "${dst}"}`,
