@@ -1,5 +1,5 @@
 const URL = "https://api.openweathermap.org/data/2.5/";
-const KEY = "d205490112f73b175082ffa7b053cc07";
+const KEY = config.API_KEY;
 
 const getLocation = () => {
     if(navigator.geolocation) {
