@@ -1,5 +1,7 @@
 import { useState, useEffect } from "react";
 
+import "../styles.css";
+
 const initialValues = { fullName: "", phoneNumber: "" };
 
 function Form({ addContact, contacts }) {
@@ -23,7 +25,7 @@ function Form({ addContact, contacts }) {
     addContact([...contacts, form]);
   };
   return (
-    <form onSubmit={onSubmit}>
+    <form onSubmit={onSubmit} className="form">
       <div>
         <input
           name="fullName"
