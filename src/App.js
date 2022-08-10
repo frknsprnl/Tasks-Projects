@@ -5,6 +5,8 @@ import { useState, useEffect } from "react";
 function App() {
   const [todos, setTodos] = useState([]);
   const [todo, setTodo] = useState({ task: "", isCompleted: false });
+  const [filter, setFilter] = useState([]);
+  const [status, setStatus] = useState("All");
 
   const onChangeInput = (e) => {
     setTodo({ [e.target.name]: e.target.value, isCompleted: false });
@@ -22,17 +24,27 @@ function App() {
   };
 
   useEffect(() => {
-    console.log(todos);
-  }, [todos]);
+    const filterHandler = () => {
+      switch (status) {
+        case "Completed":
+          setFilter(todos.filter((item) => item.isCompleted === true));
+          break;
 
-  const toggleComplete = (e) => {
-    const liDOM = e.target.parentElement.parentElement;
-    if (liDOM.classList.contains("completed")) {
-      liDOM.classList.remove("completed");
-    } else {
-      liDOM.classList.add("completed");
-    }
-  };
+        case "Active":
+          setFilter(todos.filter((item) => item.isCompleted === false));
+          break;
+
+        default:
+          setFilter(todos);
+          break;
+      }
+    };
+    filterHandler();
+  }, [todos, status]);
+
+  useEffect(() => {
+    console.log(filter);
+  }, [filter]);
 
   const completedTaskCounter = () => {
     let counter = 0;
@@ -42,6 +54,10 @@ function App() {
       }
     });
     return counter;
+  };
+
+  const statusHandler = (e) => {
+    setStatus(e.target.innerHTML);
   };
 
   return (
@@ -66,13 +82,15 @@ function App() {
           <label htmlFor="toggle-all">Mark all as complete</label>
 
           <ul className="todo-list">
-            {todos.map((todo, index) => (
-              <li key={index}>
+            {filter.map((todo, index) => (
+              <li
+                key={index}
+                className={`${todo.isCompleted ? "completed" : ""}`}
+              >
                 <div className="view">
                   <input
                     className="toggle"
                     type="checkbox"
-                    onClick={toggleComplete}
                     onChange={(e) => {
                       if (e.target.checked) {
                         todo.isCompleted = true;
@@ -81,6 +99,7 @@ function App() {
                       }
                       setTodos([...todos]);
                     }}
+                    checked={todo.isCompleted ? true : false}
                   />
                   <label>{todo.task}</label>
                   <button className="destroy"></button>
@@ -93,20 +112,24 @@ function App() {
         <footer className="footer">
           <span className="todo-count">
             <strong>{completedTaskCounter()} </strong>
-            items left
+            todos left
           </span>
 
           <ul className="filters">
             <li>
-              <a href="#/" className="selected">
+              <a href="#/" className="selected" onClick={statusHandler}>
                 All
               </a>
             </li>
             <li>
-              <a href="#/">Active</a>
+              <a href="#/" onClick={statusHandler}>
+                Active
+              </a>
             </li>
             <li>
-              <a href="#/">Completed</a>
+              <a href="#/" onClick={statusHandler}>
+                Completed
+              </a>
             </li>
           </ul>
 
