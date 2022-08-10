@@ -7,7 +7,7 @@ function App() {
   const [todo, setTodo] = useState({ task: "", isCompleted: false });
 
   const onChangeInput = (e) => {
-    setTodo({ [e.target.name]: e.target.value });
+    setTodo({ [e.target.name]: e.target.value, isCompleted: false });
   };
 
   const addTodo = (newTodo) => {
@@ -32,6 +32,16 @@ function App() {
     } else {
       liDOM.classList.add("completed");
     }
+  };
+
+  const completedTaskCounter = () => {
+    let counter = 0;
+    todos.forEach((item) => {
+      if (item.isCompleted === false) {
+        counter++;
+      }
+    });
+    return counter;
   };
 
   return (
@@ -63,6 +73,14 @@ function App() {
                     className="toggle"
                     type="checkbox"
                     onClick={toggleComplete}
+                    onChange={(e) => {
+                      if (e.target.checked) {
+                        todo.isCompleted = true;
+                      } else {
+                        todo.isCompleted = false;
+                      }
+                      setTodos([...todos]);
+                    }}
                   />
                   <label>{todo.task}</label>
                   <button className="destroy"></button>
@@ -74,7 +92,7 @@ function App() {
 
         <footer className="footer">
           <span className="todo-count">
-            <strong>{todos.length} </strong>
+            <strong>{completedTaskCounter()} </strong>
             items left
           </span>
 
