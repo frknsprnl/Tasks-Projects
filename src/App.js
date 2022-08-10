@@ -46,9 +46,9 @@ function App() {
     console.log(filter);
   }, [filter]);
 
-  const completedTaskCounter = () => {
+  const remainingTodoCounter = () => {
     let counter = 0;
-    todos.forEach((item) => {
+    filter.forEach((item) => {
       if (item.isCompleted === false) {
         counter++;
       }
@@ -111,7 +111,7 @@ function App() {
 
         <footer className="footer">
           <span className="todo-count">
-            <strong>{completedTaskCounter()} </strong>
+            <strong>{remainingTodoCounter()} </strong>
             todos left
           </span>
 
