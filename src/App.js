@@ -117,17 +117,29 @@ function App() {
 
           <ul className="filters">
             <li>
-              <a href="#/" className="selected" onClick={statusHandler}>
+              <a
+                href="#/"
+                className={status === "All" ? "selected" : ""}
+                onClick={statusHandler}
+              >
                 All
               </a>
             </li>
             <li>
-              <a href="#/" onClick={statusHandler}>
+              <a
+                href="#/"
+                className={status === "Active" ? "selected" : ""}
+                onClick={statusHandler}
+              >
                 Active
               </a>
             </li>
             <li>
-              <a href="#/" onClick={statusHandler}>
+              <a
+                href="#/"
+                className={status === "Completed" ? "selected" : ""}
+                onClick={statusHandler}
+              >
                 Completed
               </a>
             </li>
