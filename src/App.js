@@ -25,6 +25,15 @@ function App() {
     console.log(todos);
   }, [todos]);
 
+  const toggleComplete = (e) => {
+    const liDOM = e.target.parentElement.parentElement;
+    if (liDOM.classList.contains("completed")) {
+      liDOM.classList.remove("completed");
+    } else {
+      liDOM.classList.add("completed");
+    }
+  };
+
   return (
     <div className="App">
       <section className="todoapp">
@@ -50,7 +59,11 @@ function App() {
             {todos.map((todo, index) => (
               <li key={index}>
                 <div className="view">
-                  <input className="toggle" type="checkbox" />
+                  <input
+                    className="toggle"
+                    type="checkbox"
+                    onClick={toggleComplete}
+                  />
                   <label>{todo.task}</label>
                   <button className="destroy"></button>
                 </div>

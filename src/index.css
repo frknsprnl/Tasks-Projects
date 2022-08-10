@@ -178,7 +178,8 @@ body {
 }
 
 .todo-list li .toggle {
-  text-align: center;
+  display: flex;
+  justify-content: flex-start;
   width: 40px;
   /* auto, since non-WebKit browsers doesn't support input styling */
   height: auto;
