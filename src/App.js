@@ -60,6 +60,17 @@ function App() {
     setStatus(e.target.innerHTML);
   };
 
+  const toggleAll = () => {
+    const toggleAllDOM = document.querySelector(".toggle-all");
+    if (toggleAllDOM.checked === true) {
+      toggleAllDOM.checked = false;
+      setTodos(filter.map((item) => ({ ...item, isCompleted: false })));
+    } else {
+      toggleAllDOM.checked = true;
+      setTodos(filter.map((item) => ({ ...item, isCompleted: true })));
+    }
+  };
+  // sa ulan
   return (
     <div className="App">
       <section className="todoapp">
@@ -79,7 +90,9 @@ function App() {
 
         <section className="main">
           <input className="toggle-all" type="checkbox" />
-          <label htmlFor="toggle-all">Mark all as complete</label>
+          <label htmlFor="toggle-all" onClick={toggleAll}>
+            Mark all as complete
+          </label>
 
           <ul className="todo-list">
             {filter.map((todo, index) => (
