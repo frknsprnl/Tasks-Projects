@@ -61,6 +61,10 @@ function App() {
   };
 
   const toggleAll = () => {
+    if (todos.length === 0) {
+      return false;
+    }
+
     const toggleAllDOM = document.querySelector(".toggle-all");
     if (toggleAllDOM.checked === true) {
       toggleAllDOM.checked = false;
