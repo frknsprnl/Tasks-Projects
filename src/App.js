@@ -42,10 +42,6 @@ function App() {
     filterHandler();
   }, [todos, status]);
 
-  useEffect(() => {
-    console.log(filter);
-  }, [filter]);
-
   const remainingTodoCounter = () => {
     let counter = 0;
     filter.forEach((item) => {
@@ -77,6 +73,12 @@ function App() {
 
   const clearCompleted = () => {
     setTodos(filter.filter((item) => item.isCompleted === false));
+  };
+
+  const deleteTodo = (e) => {
+    const selectedTodo = e.target.previousSibling.innerHTML;
+
+    setTodos(filter.filter((item) => item.task !== selectedTodo));
   };
 
   return (
@@ -123,7 +125,7 @@ function App() {
                     checked={todo.isCompleted ? true : false}
                   />
                   <label>{todo.task}</label>
-                  <button className="destroy"></button>
+                  <button className="destroy" onClick={deleteTodo}></button>
                 </div>
               </li>
             ))}
