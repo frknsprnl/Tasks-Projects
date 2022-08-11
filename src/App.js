@@ -24,6 +24,10 @@ function App() {
   };
 
   useEffect(() => {
+    if (todos.length === 0) {
+      setStatus("All");
+    }
+
     const filterHandler = () => {
       switch (status) {
         case "Completed":
@@ -171,9 +175,7 @@ function App() {
           <button
             className="clear-completed"
             onClick={clearCompleted}
-            hidden={todos.every((item) =>
-              item.isCompleted === true ? false : true
-            )}
+            hidden={status !== "All" ? true : false}
           >
             Clear completed
           </button>
