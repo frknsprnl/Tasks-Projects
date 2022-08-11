@@ -70,7 +70,11 @@ function App() {
       setTodos(filter.map((item) => ({ ...item, isCompleted: true })));
     }
   };
-  // sa ulan
+
+  const clearCompleted = () => {
+    setTodos(filter.filter((item) => item.isCompleted === false));
+  };
+
   return (
     <div className="App">
       <section className="todoapp">
@@ -158,7 +162,9 @@ function App() {
             </li>
           </ul>
 
-          <button className="clear-completed">Clear completed</button>
+          <button className="clear-completed" onClick={clearCompleted}>
+            Clear completed
+          </button>
         </footer>
       </section>
     </div>
