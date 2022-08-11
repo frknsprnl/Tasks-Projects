@@ -130,7 +130,7 @@ function App() {
           </ul>
         </section>
 
-        <footer className="footer">
+        <footer className="footer" hidden={todos.length === 0 ? true : false}>
           <span className="todo-count">
             <strong>{remainingTodoCounter()} </strong>
             todos left
@@ -166,7 +166,13 @@ function App() {
             </li>
           </ul>
 
-          <button className="clear-completed" onClick={clearCompleted}>
+          <button
+            className="clear-completed"
+            onClick={clearCompleted}
+            hidden={todos.every((item) =>
+              item.isCompleted === true ? false : true
+            )}
+          >
             Clear completed
           </button>
         </footer>
