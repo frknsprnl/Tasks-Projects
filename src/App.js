@@ -3,7 +3,9 @@ import "./App.css";
 import { useState, useEffect } from "react";
 
 function App() {
-  const [todos, setTodos] = useState([]);
+  const [todos, setTodos] = useState(
+    JSON.parse(localStorage.getItem("todos")) || []
+  );
   const [todo, setTodo] = useState({ task: "", isCompleted: false });
   const [filter, setFilter] = useState([]);
   const [status, setStatus] = useState("All");
@@ -44,6 +46,7 @@ function App() {
       }
     };
     filterHandler();
+    localStorage.setItem("todos", JSON.stringify(todos));
   }, [todos, status]);
 
   const remainingTodoCounter = () => {
