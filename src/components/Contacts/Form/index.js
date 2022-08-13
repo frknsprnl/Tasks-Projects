@@ -9,6 +9,7 @@ function Form({ addContact, contacts }) {
 
   useEffect(() => {
     setForm(initialValues);
+    localStorage.setItem("contacts", JSON.stringify(contacts));
   }, [contacts]);
 
   const onChangeInput = (e) => {

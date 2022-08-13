@@ -6,20 +6,9 @@ import Form from "./Form";
 import List from "./List";
 
 function Contacts() {
-  const [contacts, setContacts] = useState([
-    {
-      fullName: "Furkan",
-      phoneNumber: "123213",
-    },
-    {
-      fullName: "Ahmet",
-      phoneNumber: "1213",
-    },
-    {
-      fullName: "Mehmet",
-      phoneNumber: "123123213",
-    },
-  ]);
+  const [contacts, setContacts] = useState(
+    JSON.parse(localStorage.getItem("contacts")) || []
+  );
 
   useEffect(() => {
     console.log(contacts);
