@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { v4 as uuidv4 } from "uuid";
 
 import "../styles.css";
 
@@ -13,7 +14,7 @@ function Form({ addContact, contacts }) {
   }, [contacts]);
 
   const onChangeInput = (e) => {
-    setForm({ ...form, [e.target.name]: e.target.value });
+    setForm({ ...form, id: uuidv4(), [e.target.name]: e.target.value });
   };
 
   const onSubmit = (e) => {
@@ -46,7 +47,7 @@ function Form({ addContact, contacts }) {
       </div>
 
       <div>
-        <button>Add</button>
+        <button>Add Contact</button>
       </div>
     </form>
   );

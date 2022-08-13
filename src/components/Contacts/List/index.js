@@ -2,7 +2,7 @@ import { useState } from "react";
 
 import "../styles.css";
 
-function List({ contacts }) {
+function List({ contacts, setContacts }) {
   const [filteredText, setFilteredText] = useState("");
 
   const filtered = contacts.filter((item) => {
@@ -10,6 +10,11 @@ function List({ contacts }) {
       item[key].toString().toLowerCase().includes(filteredText.toLowerCase())
     );
   });
+
+  const deleteContact = (contact_id) => {
+    const newList = contacts.filter((item) => item.id !== contact_id);
+    setContacts(newList);
+  };
 
   return (
     <div>
@@ -20,9 +25,17 @@ function List({ contacts }) {
       />
 
       <ul className="list">
-        {filtered.map((contact, index) => (
-          <li key={index}>
-            {contact.fullName} - {contact.phoneNumber}
+        {filtered.map((contact) => (
+          <li key={contact.id}>
+            {contact.fullName} {contact.phoneNumber}
+            <span
+              className="delete"
+              onClick={() => {
+                deleteContact(contact.id);
+              }}
+            >
+              X
+            </span>
           </li>
         ))}
       </ul>

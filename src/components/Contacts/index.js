@@ -18,7 +18,7 @@ function Contacts() {
     <div id="container">
       <h1 className="header">Contacts</h1>
 
-      <List contacts={contacts} />
+      <List contacts={contacts} setContacts={setContacts} />
       <Form contacts={contacts} addContact={setContacts} />
     </div>
   );
