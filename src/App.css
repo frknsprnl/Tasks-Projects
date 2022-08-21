@@ -1,11 +1,12 @@
-* {
+html {
   margin: 0;
   padding: 0;
 }
 
 .App {
   height: 100vh;
-  color: white;
+  overflow: hidden;
+
 }
 
 .dark {
@@ -23,7 +24,6 @@
   background-color: transparent;
   height: 80px;
   width: 100%;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.25);
 }
 
 .headerContainer {
@@ -62,4 +62,12 @@
 
 .searchBar:focus {
   width: 50%;
+}
+
+.sideBar {
+  width: 25%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
