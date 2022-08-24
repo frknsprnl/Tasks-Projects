@@ -2,9 +2,29 @@ import { IconButton, Switch, Text, Show, Hide } from "@chakra-ui/react";
 import { MoonIcon, SearchIcon, SunIcon } from "@chakra-ui/icons";
 import "../App.css";
 import { useTheme } from "../context/themeContext";
+import { useState, useEffect } from "react";
+import { useWeather } from "../context/weatherContext";
 
 function Header() {
   const { theme, setTheme } = useTheme();
+  const [search, setSearch] = useState("");
+  const { setWeather } = useWeather();
+
+  const handleChange = (e) => {
+    setSearch(e.target.value);
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    setWeather(search);
+    setSearch("");
+  };
+
+  useEffect(() => {
+    console.log(search);
+  }, [search]);
+
   return (
     <header
       className={`header`}
@@ -32,14 +52,18 @@ function Header() {
         </Show>
 
         <Hide below="md">
-          <input
-            className={`searchBar ${theme === "dark" ? "light" : "dark"}`}
-            style={
-              theme === "light" ? { color: "#f3f2ef" } : { color: "#1a202c" }
-            }
-            type="text"
-            spellCheck={false}
-          />
+          <form className="weatherForm" onSubmit={handleSubmit}>
+            <input
+              className={`searchBar ${theme === "dark" ? "light" : "dark"}`}
+              style={
+                theme === "light" ? { color: "#f3f2ef" } : { color: "#1a202c" }
+              }
+              type="text"
+              spellCheck={false}
+              value={search}
+              onChange={handleChange}
+            />
+          </form>
         </Hide>
 
         <div className="utilityContainer">
