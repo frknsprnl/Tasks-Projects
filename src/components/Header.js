@@ -4,26 +4,38 @@ import "../App.css";
 import { useTheme } from "../context/themeContext";
 import { useState, useEffect } from "react";
 import { useWeather } from "../context/weatherContext";
+import { getLocation } from "../api/weatherAPI";
+import { useUnit } from "../context/unitContext";
 
 function Header() {
   const { theme, setTheme } = useTheme();
-  const [search, setSearch] = useState("");
   const { setWeather } = useWeather();
+  const { unit, setUnit } = useUnit();
+  const [form, setForm] = useState("");
+  const [search, setSearch] = useState("");
 
   const handleChange = (e) => {
-    setSearch(e.target.value);
+    setForm(e.target.value);
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-
-    setWeather(search);
-    setSearch("");
+    try {
+      getLocation(form, unit).then((item) => setWeather(item));
+    } catch (error) {
+      console.log(error);
+      return false;
+    }
+    setSearch(form);
+    setForm("");
   };
 
   useEffect(() => {
-    console.log(search);
-  }, [search]);
+    if (search) {
+      getLocation(search, unit).then((item) => setWeather(item));
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [unit]);
 
   return (
     <header
@@ -60,7 +72,7 @@ function Header() {
               }
               type="text"
               spellCheck={false}
-              value={search}
+              value={form}
               onChange={handleChange}
             />
           </form>
@@ -89,7 +101,13 @@ function Header() {
             }
           />
           <Text fontSize={"2xl"}>°C</Text>
-          <Switch size={"lg"} colorScheme="teal" />
+          <Switch
+            size={"lg"}
+            colorScheme="teal"
+            onChange={(e) => {
+              e.target.checked === true ? setUnit("F") : setUnit("C");
+            }}
+          />
           <Text fontSize={"2xl"}>°F</Text>
         </div>
       </div>
