@@ -42,6 +42,10 @@ html {
   gap: 1em;
 }
 
+.weatherForm {
+  width: 100%;
+}
+
 .searchBar {
   height: 40px;
   width: 40%;
@@ -65,9 +69,13 @@ html {
 }
 
 .sideBar {
-  width: 25%;
+  width: 400px;
   height: 100vh;
   display: flex;
   justify-content: center;
-  align-items: center;
+}
+
+.section {
+  width: 100%;
+  padding: 30px;
 }
