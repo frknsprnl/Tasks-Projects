@@ -1,26 +1,51 @@
 import React from "react";
-import { useTheme } from "../context/themeContext";
-import { getLatLon } from "../api/weatherAPI";
+import { useWeather } from "../context/weatherContext";
+import { useUnit } from "../context/unitContext";
+import { Image, Text, Center } from "@chakra-ui/react";
 
 function Sidebar() {
-  const { theme } = useTheme();
+  const { weather } = useWeather();
+  const { unit } = useUnit();
+
+  const capitalizeFirst = (string) => {
+    return string.charAt(0).toUpperCase() + string.slice(1);
+  };
 
   return (
-    <div
-      className="sideBar"
-      style={
-        theme === "dark"
-          ? { borderRight: "1px solid rgba(255, 255, 255, 0.25)" }
-          : { borderRight: "1px solid rgba(0, 0, 0, 0.25)" }
-      }
-    >
-      <button
-        onClick={() => {
-          getLatLon("eskisehir");
-        }}
-      >
-        API Call!
-      </button>
+    <div>
+      {weather.name && (
+        <div style={{ marginTop: "40px" }}>
+          <Text style={{ fontSize: "2.5em", textAlign: "center" }}>
+            {`${weather.name}`}
+          </Text>
+          <Text
+            style={{ fontSize: "1.2em", textAlign: "center" }}
+            textColor={"gray.500"}
+          >
+            {`${weather.country}`}
+          </Text>
+          <Center>
+            <Image
+              src={`https://developer.foreca.com/static/images/symbols/${weather.forecast[0].symbol}.png`}
+              alt={weather.forecast[0].symbolPhrase}
+            ></Image>
+          </Center>
+
+          <Center>
+            <Text fontSize={"1.5em"}>
+              {capitalizeFirst(weather.forecast[0].symbolPhrase)}
+            </Text>
+          </Center>
+
+          <Center>
+            <Text fontSize={"1.3em"}>
+              {`${weather.forecast[0].minTemp} ${
+                unit === "F" ? "°F" : "°C"
+              } / ${weather.forecast[0].maxTemp} ${unit === "F" ? "°F" : "°C"}`}
+            </Text>
+          </Center>
+        </div>
+      )}
     </div>
   );
 }
