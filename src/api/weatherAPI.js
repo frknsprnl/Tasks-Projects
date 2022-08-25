@@ -1,17 +1,56 @@
 import axios from "axios";
-axios.defaults.baseURL = "http://api.openweathermap.org";
+axios.defaults.baseURL = "https://foreca-weather.p.rapidapi.com";
 
-export const getData = async (cityName) => {
+export const getLocation = (cityName, unit) => {
+  const options = {
+    method: "GET",
+    url: `/location/search/${cityName}`,
+    params: { lang: "en" },
+    headers: {
+      "X-RapidAPI-Key": `${process.env.REACT_APP_API_KEY}`,
+      "X-RapidAPI-Host": "foreca-weather.p.rapidapi.com",
+    },
+  };
+
   const myResponse = axios
-    .get(
-      `/data/2.5/forecast?q=${cityName}&appid=${process.env.REACT_APP_API_KEY}`
-    )
-    .then((response) => {
-      return response.data;
+    .request(options)
+    .then(function (response) {
+      const cityInfo = response.data.locations[0];
+      return getWeatherData(response.data.locations[0].id, unit, cityInfo);
     })
-    .then((data) => {
-      return data;
+    .catch(function (error) {
+      console.error(error);
+      return false;
+    });
+  return myResponse;
+};
+
+const getWeatherData = (location_id, unit, info) => {
+  const options = {
+    method: "GET",
+    url: `/forecast/daily/${location_id}`,
+    params: {
+      alt: "0",
+      tempunit: `${unit}`,
+      windunit: "MS",
+      periods: "7",
+      dataset: "full",
+    },
+    headers: {
+      "X-RapidAPI-Key": `${process.env.REACT_APP_API_KEY}`,
+      "X-RapidAPI-Host": "foreca-weather.p.rapidapi.com",
+    },
+  };
+
+  const myResponse = axios
+    .request(options)
+    .then(function (response) {
+      const assignedData = Object.assign(response.data, info);
+      return assignedData;
     })
-    .catch((error) => console.log(error));
+    .catch(function (error) {
+      console.error(error);
+      return false;
+    });
   return myResponse;
 };
