@@ -1,5 +1,5 @@
-import { IconButton, Switch, Text, Show, Hide } from "@chakra-ui/react";
-import { MoonIcon, SearchIcon, SunIcon } from "@chakra-ui/icons";
+import { IconButton, Switch, Text } from "@chakra-ui/react";
+import { MoonIcon, SunIcon } from "@chakra-ui/icons";
 import "../App.css";
 import { useTheme } from "../context/themeContext";
 import { useState, useEffect } from "react";
@@ -42,46 +42,37 @@ function Header() {
       className={`header`}
       style={
         theme === "dark"
-          ? { borderBottom: "1px solid rgba(255, 255, 255, 0.25)" }
-          : { borderBottom: "1px solid rgba(0, 0, 0, 0.25)" }
+          ? {
+              borderBottom: "1px solid rgba(255, 255, 255, 0.05)",
+              boxShadow: "0 2px 4px -1px rgba(0,0,0,0.25)",
+            }
+          : {
+              borderBottom: "1px solid rgba(0, 0, 0, 0.05)",
+              boxShadow: "rgba(50, 50, 93, 0.25) 0px 13px 27px -5px",
+            }
       }
     >
       <div className={`headerContainer`}>
-        <Show below="md">
-          <IconButton
-            className="searchButton"
-            w={12}
-            h={12}
-            backgroundColor={"transparent"}
-            _hover={
-              theme === "dark"
-                ? { backgroundColor: "#30343c" }
-                : { backgroundColor: "" }
+        <form className="weatherForm" onSubmit={handleSubmit}>
+          <input
+            className={`searchBar`}
+            style={
+              theme === "light"
+                ? { color: "#f3f2ef", backgroundColor: "#4A5568" }
+                : { color: "#1a202c", backgroundColor: "#fff" }
             }
-            aria-label="Search"
-            icon={<SearchIcon w={8} h={8} />}
+            type="text"
+            spellCheck={false}
+            value={form}
+            onChange={handleChange}
           />
-        </Show>
-
-        <Hide below="md">
-          <form className="weatherForm" onSubmit={handleSubmit}>
-            <input
-              className={`searchBar ${theme === "dark" ? "light" : "dark"}`}
-              style={
-                theme === "light" ? { color: "#f3f2ef" } : { color: "#1a202c" }
-              }
-              type="text"
-              spellCheck={false}
-              value={form}
-              onChange={handleChange}
-            />
-          </form>
-        </Hide>
+        </form>
+        {/* </Hide> */}
 
         <div className="utilityContainer">
           <IconButton
-            w={12}
-            h={12}
+            w={[8, 12]}
+            h={[8, 12]}
             backgroundColor={"transparent"}
             _hover={
               theme === "dark"
@@ -94,21 +85,21 @@ function Header() {
             }}
             icon={
               theme === "dark" ? (
-                <MoonIcon w={8} h={8} color={"teal"} />
+                <SunIcon w={[6, 8]} h={[6, 8]} color={"yellow.400"} />
               ) : (
-                <SunIcon w={8} h={8} color={"teal"} />
+                <MoonIcon w={[6, 8]} h={[6, 8]} color={"gray.600"} />
               )
             }
           />
-          <Text fontSize={"2xl"}>°C</Text>
+          <Text fontSize={["20px", "2xl"]}>°C</Text>
           <Switch
-            size={"lg"}
-            colorScheme="teal"
+            size={["md", "lg"]}
+            colorScheme={theme === "dark" ? "purple" : "gray"}
             onChange={(e) => {
               e.target.checked === true ? setUnit("F") : setUnit("C");
             }}
           />
-          <Text fontSize={"2xl"}>°F</Text>
+          <Text fontSize={["20px", "2xl"]}>°F</Text>
         </div>
       </div>
     </header>
