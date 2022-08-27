@@ -1,13 +1,13 @@
-import { createContext, useContext, useState, useEffect } from "react";
+import { createContext, useContext, useState } from "react";
 
 const ThemeContext = createContext();
 
 export const ThemeProvider = ({ children }) => {
   const [theme, setTheme] = useState("dark");
 
-  useEffect(() => {
-    console.log(theme);
-  }, [theme]);
+  // useEffect(() => {
+  //   console.log(theme);
+  // }, [theme]);
 
   const values = {
     theme,
