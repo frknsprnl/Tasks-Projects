@@ -53,7 +53,7 @@ function Sidebar() {
             </Text>
             <Text
               style={{ fontSize: "1.2em", textAlign: "center" }}
-              textColor={"gray.500"}
+              textColor={"gray.400"}
             >
               {`${weather.country}`}
             </Text>
@@ -65,18 +65,21 @@ function Sidebar() {
             </Center>
 
             <Center>
-              <Text fontSize={"1.5em"}>
+              <Text fontSize={"1.5em"} textColor={"purple.500"}>
                 {capitalizeFirst(weather.forecast[0].symbolPhrase)}
               </Text>
             </Center>
 
-            <Center>
-              <Text fontSize={"1.3em"}>
-                {`${weather.forecast[0].minTemp} ${
-                  unit === "F" ? "°F" : "°C"
-                } / ${weather.forecast[0].maxTemp} ${
-                  unit === "F" ? "°F" : "°C"
-                }`}
+            <Center
+              display={"flex"}
+              justifyContent={"space-evenly"}
+              fontSize={"1.3em"}
+            >
+              <Text>
+                {`${weather.forecast[0].maxTemp} ${unit === "F" ? "°F" : "°C"}`}
+              </Text>
+              <Text textColor={"gray.500"}>
+                {`${weather.forecast[0].minTemp} ${unit === "F" ? "°F" : "°C"}`}
               </Text>
             </Center>
           </div>

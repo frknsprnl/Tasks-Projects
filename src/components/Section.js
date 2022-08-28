@@ -51,16 +51,15 @@ function Section() {
                   h={16}
                 ></Image>
               </Center>
-              <Text
-                style={{ textAlign: "center", marginTop: "10px" }}
-                textColor={"gray.400"}
-              >
+              <Text style={{ textAlign: "center" }} textColor={"purple.500"}>
                 {capitalizeFirst(forecast.symbolPhrase)}
               </Text>
-              <Center>
+              <Center display={"flex"} gap={".8em"}>
                 <Text>
-                  {`${forecast.minTemp} ${unit === "F" ? "°F" : "°C"} / 
-                  ${forecast.maxTemp} ${unit === "F" ? "°F" : "°C"} `}
+                  {`${forecast.maxTemp} ${unit === "F" ? "°F" : "°C"}`}
+                </Text>
+                <Text textColor={"gray.500"}>
+                  {`${forecast.minTemp} ${unit === "F" ? "°F" : "°C"}`}
                 </Text>
               </Center>
             </Box>
