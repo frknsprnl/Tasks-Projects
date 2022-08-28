@@ -6,6 +6,7 @@ import { useState, useEffect } from "react";
 import { useWeather } from "../context/weatherContext";
 import { getLocation } from "../api/weatherAPI";
 import { useUnit } from "../context/unitContext";
+import { reverseGeocoding } from "../api/weatherAPI";
 
 function Header() {
   const { theme, setTheme } = useTheme();
@@ -33,6 +34,16 @@ function Header() {
   useEffect(() => {
     if (search) {
       getLocation(search, unit).then((item) => setWeather(item));
+    } else if ("geolocation" in navigator) {
+      navigator.geolocation.getCurrentPosition(async (position) => {
+        const cityName = await reverseGeocoding(
+          position.coords.latitude,
+          position.coords.longitude
+        );
+        getLocation(cityName, unit).then((item) => setWeather(item));
+      });
+    } else {
+      console.log("Location service is not available for this user.");
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [unit]);
@@ -58,16 +69,16 @@ function Header() {
             className={`searchBar`}
             style={
               theme === "light"
-                ? { color: "#f3f2ef", backgroundColor: "#4A5568" }
-                : { color: "#1a202c", backgroundColor: "#fff" }
+                ? { backgroundColor: "#4a5568", color: "white" }
+                : {}
             }
             type="text"
             spellCheck={false}
             value={form}
             onChange={handleChange}
+            placeholder={"Search for places..."}
           />
         </form>
-        {/* </Hide> */}
 
         <div className="utilityContainer">
           <IconButton
