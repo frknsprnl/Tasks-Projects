@@ -54,3 +54,30 @@ const getWeatherData = (location_id, unit, info) => {
     });
   return myResponse;
 };
+
+export const reverseGeocoding = (lat, lon) => {
+  const options = {
+    method: "GET",
+    url: "https://forward-reverse-geocoding.p.rapidapi.com/v1/reverse",
+    params: {
+      lat: `${lat}`,
+      lon: `${lon}`,
+      "accept-language": "en",
+      polygon_threshold: "0.0",
+    },
+    headers: {
+      "X-RapidAPI-Key": `${process.env.REACT_APP_API_KEY}`,
+      "X-RapidAPI-Host": "forward-reverse-geocoding.p.rapidapi.com",
+    },
+  };
+
+  const myResponse = axios
+    .request(options)
+    .then(function (response) {
+      return response.data.address.city;
+    })
+    .catch(function (error) {
+      console.error(error);
+    });
+  return myResponse;
+};
