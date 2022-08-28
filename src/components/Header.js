@@ -106,6 +106,7 @@ function Header() {
           <Switch
             size={["md", "lg"]}
             colorScheme={theme === "dark" ? "purple" : "gray"}
+            isChecked={unit === "C" ? false : true}
             onChange={(e) => {
               e.target.checked === true ? setUnit("F") : setUnit("C");
             }}

@@ -1,13 +1,13 @@
-import { createContext, useContext, useState } from "react";
+import { createContext, useContext, useState, useEffect } from "react";
 
 const UnitContext = createContext();
 
 export const UnitProvider = ({ children }) => {
-  const [unit, setUnit] = useState("C");
+  const [unit, setUnit] = useState(localStorage.getItem("unit") || "C");
 
-  // useEffect(() => {
-  //   console.log(unit);
-  // }, [unit]);
+  useEffect(() => {
+    localStorage.setItem("unit", unit);
+  }, [unit]);
 
   const values = {
     unit,
