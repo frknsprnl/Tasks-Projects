@@ -1,4 +1,4 @@
-import React from "react";
+import { useState, useEffect } from "react";
 import { useWeather } from "../context/weatherContext";
 import { useUnit } from "../context/unitContext";
 import { Image, Text, Center } from "@chakra-ui/react";
@@ -8,6 +8,7 @@ function Sidebar() {
   const { weather } = useWeather();
   const { unit } = useUnit();
   const { theme } = useTheme();
+  const [time, setTime] = useState("");
 
   const capitalizeFirst = (string) => {
     return string.charAt(0).toUpperCase() + string.slice(1);
@@ -27,6 +28,32 @@ function Sidebar() {
     return `${days[newDate.getDay()]} ${date.slice(-2)}`;
   };
 
+  useEffect(() => {
+    const timer = () => {
+      const today = new Date();
+      let h = today.getHours();
+      let m = today.getMinutes();
+      let s = today.getSeconds();
+
+      m = checkTime(m);
+      s = checkTime(s);
+
+      let currentTime = `${h}:${m}:${s}`;
+
+      setTimeout(timer, 1000);
+      setTime(currentTime);
+    };
+
+    timer();
+  }, [time]);
+
+  const checkTime = (i) => {
+    if (i < 10) {
+      i = "0" + i;
+    }
+    return i;
+  };
+
   return (
     <>
       {weather.name && (
@@ -44,7 +71,10 @@ function Sidebar() {
                 }
           }
         >
-          <div style={{ marginTop: "4em" }}>
+          <div style={{ marginTop: "2em" }}>
+            <Text align={"center"} marginBottom={"1em"} fontSize={"3xl"}>
+              {time}
+            </Text>
             <Text fontWeight={600}>
               {isoDateConverter(weather.forecast[0].date)}
             </Text>
