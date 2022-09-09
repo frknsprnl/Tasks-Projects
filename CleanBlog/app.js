@@ -10,10 +10,9 @@ mongoose.connect("mongodb://localhost/cleanblog-test-db");
 
 // TEMPLATE ENGINE
 app.set("view engine", "ejs");
-app.set("views", path.join(__dirname, "../frontend/views"));
 
 // MIDDLEWARES
-app.use(express.static("../frontend/public"));
+app.use(express.static("public"));
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
