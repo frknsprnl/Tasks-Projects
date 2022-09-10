@@ -2,8 +2,6 @@ const express = require("express");
 const mongoose = require("mongoose");
 const methodOverride = require("method-override");
 const ejs = require("ejs");
-const path = require("path");
-const Blog = require("./models/Blog");
 const blogController = require("./controllers/blogController");
 const pageController = require("./controllers/pageController");
 
