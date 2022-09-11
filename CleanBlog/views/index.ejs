@@ -36,7 +36,7 @@
                 </a>
                 <p class="post-meta">Posted by
                   <a> <%= blogs[i].author %> </a>
-                  on <%= blogs[i].dateCreated %>
+                  on <%= (blogs[i].dateCreated).toLocaleString() %>
                 </p>
               </div>
               <hr>
