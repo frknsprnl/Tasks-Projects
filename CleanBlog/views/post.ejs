@@ -20,8 +20,8 @@
                   <%= blog.detail %>
                 </h2>
                 <span class="meta">Posted by
-                  <a href="#">Start Bootstrap</a>
-                  on <%= blog.dateCreated %></span>
+                  <a href="#"><%= blog.author %></a>
+                  on <%= (blog.dateCreated).toLocaleString() %></span>
               </div>
             </div>
           </div>
