@@ -32,11 +32,13 @@
       <article>
         <div class="container">
           <div class="row">
+            <% if (blog.author !== "admin") { %> 
             <div class="col-md-12 d-flex justify-content-end">
               <a class="btn btn-primary mr-2" href="/posts/edit/<%= blog._id %>">UPDATE</a>
               <a class="btn btn-primary" onclick="return confirm('Are you sure?')"
                 href="/posts/<%= blog._id %>?_method=DELETE">DELETE</a>
             </div>
+            <% } %>
             <div class="col-lg-8 col-md-10 mx-auto">
               <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Totam enim temporibus ad laborum, quasi quae,
                 illo deleniti ipsum placeat aperiam nesciunt amet aliquid adipisci commodi omnis pariatur rerum debitis.
