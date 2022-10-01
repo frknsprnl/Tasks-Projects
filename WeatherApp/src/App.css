@@ -1,0 +1,114 @@
+html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+.App {
+  height: 100vh;
+
+}
+
+.dark {
+  background-color: #1a202c;
+  color: #fff;
+
+}
+
+.light {
+  /* background-color: #fff; */
+  color: #1a202c;
+}
+
+.header {
+  background-color: transparent;
+  height: 80px;
+  width: 100%;
+}
+
+.headerContainer {
+  height: 80px;
+  width: 80%;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.utilityContainer {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+}
+
+.weatherForm {
+  width: 100%;
+}
+
+.searchBar {
+  height: 40px;
+  width: 40%;
+  outline: none;
+  font-weight: 500;
+  border-radius: 12px;
+  color: #1a202c;
+  background-color: #fff;
+  padding: 0 20px;
+  transition: 3s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+
+@media only screen and (max-width:600px) {
+
+  .headerContainer {
+    padding: 0;
+  }
+
+  .searchBar {
+    width: 70%;
+    height: 30px;
+  }
+
+  input.searchBar:focus {
+    width: 90%;
+  }
+
+  .utilityContainer {
+    gap: .4em;
+  }
+
+  .mainDiv {
+    flex-direction: column;
+  }
+
+  .mainDiv>.sideBar {
+    max-width: 100%;
+  }
+
+}
+
+.searchBar:focus {
+  width: 50%;
+}
+
+.mainDiv {
+  display: flex;
+}
+
+.sideBar {
+  width: 100%;
+  max-width: 20%;
+  display: flex;
+  justify-content: center;
+  padding-bottom: 40px;
+  border-radius: 0 0 12px 12px;
+}
+
+.section {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  width: 100%;
+  padding: 30px;
+}
