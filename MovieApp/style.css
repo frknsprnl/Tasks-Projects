@@ -1,0 +1,127 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+body {
+    background: #0f0c29;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(-45deg, #24243e, #302b63, #0f0c29);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(-45deg, #24243e, #302b63, #0f0c29);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background-size: 400% 400%;
+    animation: gradient 10s ease infinite;
+    font-family: 'Fredoka One', cursive;
+}
+
+.app {
+    margin-top: 60px;
+}
+
+.header {
+    color: white;
+    text-align: center;
+}
+
+.inputDiv {
+    margin-top: 40px;
+    text-align: center;
+}
+
+input {
+    border-radius: 8px;
+    padding: 6px 16px;
+    width: 20em;
+    font-size: 16px;
+    outline: none;
+}
+
+
+.swiper-wrapper {
+    padding: 40px 0;
+    margin: 0 auto;
+}
+
+@media only screen and (min-width: 600px) {
+    .swiper-wrapper {
+        gap: 1em;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .swiper-slide {
+        display: flex;
+        justify-content: center;
+    }
+}
+
+.swiper-header {
+    color: white;
+
+}
+
+.swiper-slide>img {
+    height: 300px;
+    width: 200px;
+    user-select: none;
+    border-radius: 12px;
+}
+
+@media only screen and (max-width: 600px) {
+    .swiper-slide>img {
+        height: 300px;
+        width: 200px;
+    }
+}
+
+@media only screen and (min-width: 600px) {
+    .swiper-slide {
+        flex-shrink: 100 !important;
+        transition: 250ms all;
+    }
+}
+
+.swiper-slide:hover {
+    transform: scale(1.2);
+    z-index: 1;
+}
+
+.swiper-slide:first-child:hover {
+    margin: 0 0 0 20px;
+}
+
+.swiper-slide:last-child:hover {
+    margin: 0 0 0 -20px;
+}
+
+.modal-header {
+    white-space: nowrap;
+    font-family: 'Changa', sans-serif;
+}
+
+@media only screen and (max-width: 600px) {
+    .modal-img {
+        height: 300px;
+        width: 200px;
+    }
+}
