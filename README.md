@@ -56,5 +56,5 @@
 
 ### <b> Data Types and Algorythm </b> <a href="https://github.com/frknsprnl/Tasks-Projects/tree/master/data-types-algorythms"><sub> Link </sub></a>
 
-- <a href="https://github.com/frknsprnl/PatikaTasks/tree/master/Data%20Types%20%26%20Algorythms/UMLDiagrams"> UML Diagrams </a>
-- <a href="https://github.com/frknsprnl/PatikaTasks/tree/master/Data%20Types%20%26%20Algorythms"> BinarySearchTree / Insertion Sort / Merge Sort Tasks </a>
+- <a href="https://github.com/frknsprnl/Tasks-Projects/tree/master/data-types-algorythms/UMLDiagrams"> UML Diagrams </a>
+- <a href="https://github.com/frknsprnl/Tasks-Projects/tree/master/data-types-algorythms"> BinarySearchTree / Insertion Sort / Merge Sort Tasks </a>
