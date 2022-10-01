@@ -1,0 +1,121 @@
+body {
+    background-image: url('https://images.unsplash.com/photo-1519681393784-d120267933ba?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1124&q=100');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+@media only screen and (max-width:600px) {
+
+    .App {
+        padding: 0 10px 0 10px;
+    }
+}
+
+
+#container {
+    width: 400px;
+    backdrop-filter: blur(16px) saturate(180%);
+    box-shadow: 0 8px 24px 0 rgba(255, 255, 255, 0.4);
+    -webkit-backdrop-filter: blur(16px) saturate(180%);
+    background-color: rgba(17, 25, 40, 0.75);
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.125);
+    padding: 40px;
+    border-radius: 12px;
+}
+
+.header {
+    color: white;
+}
+
+input {
+    width: 100%;
+    padding: 6px;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    background-color: transparent;
+    color: white;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid white;
+}
+
+input[name="phoneNumber"] {
+    margin-top: 20px;
+}
+
+ul {
+    height: 120px;
+    overflow: auto;
+}
+
+ul::-webkit-scrollbar {
+    background-color: transparent;
+    width: .8em;
+
+}
+
+ul::-webkit-scrollbar-thumb {
+    background-color: #646464;
+    border-radius: 12px;
+}
+
+ul,
+li {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+.list {
+    margin: 15px 0;
+}
+
+.list>li {
+    background-color: transparent;
+    color: white;
+    padding: 5px;
+    margin-bottom: 2px;
+}
+
+.delete {
+    float: right;
+    margin-right: 20px;
+    display: none;
+    cursor: default;
+    user-select: none;
+}
+
+.list li:hover .delete {
+    display: block;
+}
+
+
+.totalContacts {
+    color: white;
+    border-top: 1px solid rgba(255, 255, 255, 0.125);
+    padding: 16px 0 0 0;
+
+}
+
+.form {
+    margin-top: 20px;
+}
+
+.form button {
+    width: 100%;
+    padding: 8px 0;
+    background: darkorchid;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    margin-top: 40px;
+    transition: .5s;
+}
+
+.form button:hover {
+    background-color: rgb(132, 30, 184);
+}
