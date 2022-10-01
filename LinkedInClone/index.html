@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Feed | LinkedIn</title>
+    <link rel="icon" href="assets/linkedin.png" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.2/font/bootstrap-icons.css" />
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+    <!-- Navbar Start -->
+    <nav class="navbar navbar-expand-lg sticky-nav" style="height: 60px; z-index: 1; padding-top: 0; padding-bottom: 0">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" fill="#FFFFFFE6" class="bi bi-linkedin"
+                    viewBox="0 0 16 16">
+                    <path
+                        d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z" />
+                </svg>
+            </a>
+            <div class="d-none d-md-block">
+                <form class="d-flex" role="search">
+                    <img src="assets/search-solid.svg" alt="" style="
+                background-color: #38434f;
+                border-top-left-radius: 5px;
+                border-bottom-left-radius: 5px;
+                padding-left: 10px;
+              " />
+                    <input class="form-control" type="search" placeholder="Search" aria-label="Search" />
+                </form>
+            </div>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-lg-0">
+                    <li class="nav-item pe-3 ps-3" style="border-bottom: white 2px double">
+                        <a class="nav-link text-white text-center" aria-current="page" href="#">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                                class="bi bi-house-fill" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                    d="m8 3.293 6 6V13.5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 13.5V9.293l6-6zm5-.793V6l-2-2V2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5z" />
+                                <path fill-rule="evenodd"
+                                    d="M7.293 1.5a1 1 0 0 1 1.414 0l6.647 6.646a.5.5 0 0 1-.708.708L8 2.207 1.354 8.854a.5.5 0 1 1-.708-.708L7.293 1.5z" />
+                            </svg>
+                            <span>Home</span>
+                        </a>
+                    </li>
+                    <li class="nav-item ps-1 pe-1">
+                        <a class="nav-link text-center" href="#">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                                class="bi bi-people-fill" viewBox="0 0 16 16">
+                                <path d="M7 14s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1H7zm4-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
+                                <path fill-rule="evenodd"
+                                    d="M5.216 14A2.238 2.238 0 0 1 5 13c0-1.355.68-2.75 1.936-3.72A6.325 6.325 0 0 0 5 9c-4 0-5 3-5 4s1 1 1 1h4.216z" />
+                                <path d="M4.5 8a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5z" />
+                            </svg>
+                            <span>My Network</span></a>
+                    </li>
+                    <li class="nav-item ps-2 pe-2">
+                        <a class="nav-link text-center" href="#">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                                class="bi bi-briefcase-fill" viewBox="0 0 16 16">
+                                <path
+                                    d="M6.5 1A1.5 1.5 0 0 0 5 2.5V3H1.5A1.5 1.5 0 0 0 0 4.5v1.384l7.614 2.03a1.5 1.5 0 0 0 .772 0L16 5.884V4.5A1.5 1.5 0 0 0 14.5 3H11v-.5A1.5 1.5 0 0 0 9.5 1h-3zm0 1h3a.5.5 0 0 1 .5.5V3H6v-.5a.5.5 0 0 1 .5-.5z" />
+                                <path
+                                    d="M0 12.5A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5V6.85L8.129 8.947a.5.5 0 0 1-.258 0L0 6.85v5.65z" />
+                            </svg>
+                            <span>Jobs</span></a>
+                    </li>
+                    <li class="nav-item ps-1 pe-1">
+                        <a class="nav-link text-center" href="#">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                                class="bi bi-chat-right-dots-fill" viewBox="0 0 16 16">
+                                <path
+                                    d="M16 2a2 2 0 0 0-2-2H2a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h9.586a1 1 0 0 1 .707.293l2.853 2.853a.5.5 0 0 0 .854-.353V2zM5 6a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm4 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm3 1a1 1 0 1 1 0-2 1 1 0 0 1 0 2z" />
+                            </svg>
+                            <span>Messaging</span></a>
+                    </li>
+                    <li class="nav-item ps-1 pe-1">
+                        <a class="nav-link text-center" href="#">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                                class="bi bi-bell-fill" viewBox="0 0 16 16">
+                                <path
+                                    d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2zm.995-14.901a1 1 0 1 0-1.99 0A5.002 5.002 0 0 0 3 6c0 1.098-.5 6-2 7h14c-1.5-1-2-5.902-2-7 0-2.42-1.72-4.44-4.005-4.901z" />
+                            </svg>
+                            <span>Notifications</span></a>
+                    </li>
+                    <li class="nav-item pe-3 ps-1" style="border-right: 1px solid #323232">
+                        <a class="nav-link text-center" href="#">
+                            <img class="user-img" src="assets/frknsprnl.png" alt="" />
+                            <span>Me&nbsp;<img src="/assets/down-arrow.svg" alt="" class="down-arrow" /></span></a>
+                    </li>
+                    <li class="nav-item ps-3">
+                        <a class="nav-link text-center" href="#">
+                            <img class="" src="assets/appsbutton.svg" alt="" />
+                            <span>Work&nbsp;<img src="/assets/down-arrow.svg" alt="" class="down-arrow" /></span></a>
+                    </li>
+                    <li class="nav-item ps-2 d-flex align-items-center">
+                        <a href="" class="premium-text">Try Premium for
+                            <br />
+                            <span class="d-flex justify-content-center">free</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Navbar End -->
+
+    <div class="container mt-4 position-relative" style="padding-left: 0; padding-right: 0">
+        <div class="row">
+            <!-- Aside Start -->
+            <aside class="col-sm-3">
+                <div class="">
+                    <div class="card" style="width: 14rem; background-color: #1d2226">
+                        <img src="assets/coverpic.jpg" class="card-img-top" alt="..." />
+                        <img src="assets/frknsprnl.png" alt="" class="profile-img position-absolute" />
+                        <div class="card-body mt-5">
+                            <h5 class="card-title text-center text-white fontsize-16">
+                                Furkan Süpürenel
+                            </h5>
+                            <p class="card-text text-center text-gray-light fontsize-12">
+                                Student at Suleyman Demirel University
+                            </p>
+                        </div>
+                        <ul class="list-group list-group-flush pt-2"
+                            style="border-top: 1px solid rgba(106, 104, 104, 0.4)">
+                            <li class="list-group-item fontsize-12 fw-600 text-gray-light">
+                                Who viewed your profile
+                                <span class="float-end" style="color: skyblue">76</span>
+                            </li>
+                            <li class="list-group-item fontsize-12 fw-600 text-gray-light pb-2"
+                                style="border-bottom: 1px solid rgba(106, 104, 104, 0.4)">
+                                Connections
+                                <span class="float-end" style="color: skyblue">359</span><br />
+                                <span class="text-white">Grow your network</span>
+                            </li>
+                            <li class="list-group-item fontsize-12 text-gray-light pt-2 pb-2"
+                                style="border-bottom: 1px solid rgba(106, 104, 104, 0.4)">
+                                Access exclusive tools & insights <br />
+                                <span class="text-white fw-600"><svg xmlns="http://www.w3.org/2000/svg" width="14"
+                                        height="14" fill="#f8c77e" class="bi bi-slash-square-fill me-1"
+                                        viewBox="0 0 16 16">
+                                        <path
+                                            d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2zm9.354 5.354-6 6a.5.5 0 0 1-.708-.708l6-6a.5.5 0 0 1 .708.708z" />
+                                    </svg>
+                                    Try Premium for free</span>
+                            </li>
+                            <li class="list-group-item fontsize-12 fw-600 text-white pt-3 pb-3">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="#FFFFFFBF"
+                                    class="bi bi-bookmark-fill me-1" viewBox="0 0 16 16">
+                                    <path
+                                        d="M2 2v13.5a.5.5 0 0 0 .74.439L8 13.069l5.26 2.87A.5.5 0 0 0 14 15.5V2a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2z" />
+                                </svg>
+                                My items
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="card mt-2" style="width: 14rem; background-color: #1d2226">
+                    <ul class="list-group list-group-flush"
+                        style="border-color: #38434f; border-bottom: #38434f 1px solid">
+                        <span class="text-white fontsize-12 ms-3 mt-3 mb-2">Recent</span>
+                        <li class="list-group-item fontsize-12 fw-600 text-gray-light">
+                            JavaScript
+                        </li>
+                        <li class="list-group-item fontsize-12 fw-600 text-gray-light" style="border-color: #38434f">
+                            Android Bootcamp Turkey
+                        </li>
+                        <li class="list-group-item fontsize-12 fw-600 text-gray-light">
+                            Java Development & Design
+                        </li>
+                        <span class="fontsize-12 ms-3 mt-3 mb-2 fw-600" style="color: skyblue">Groups</span>
+                        <li class="list-group-item fontsize-12 fw-600 text-gray-light">
+                            JavaScript
+                        </li>
+                        <li class="list-group-item fontsize-12 fw-600 text-gray-light">
+                            Java Development & Design
+                        </li>
+                        <span class="fontsize-12 ms-3 mt-3 mb-2 fw-600" style="color: skyblue">Events</span>
+                        <span class="fontsize-12 ms-3 mt-3 mb-2 fw-600 mb-3" style="color: skyblue">Followed
+                            Hashtags</span>
+                        <li class="list-group-item text-white fw-600 fontsize-14 text-center"
+                            style="border-top: #38434f 1px solid; padding: 12px 0px">
+                            Discover more
+                        </li>
+                    </ul>
+                </div>
+            </aside>
+            <!-- Aside End -->
+            <!-- Article Start -->
+            <article class="col-sm-6">
+                <div class="card" style="background-color: #1d2226">
+                    <div class="text-white" style="padding: 12px 12px 0px 12px">
+                        <img src="assets/frknsprnl.png" alt="" style="
+                  width: 48px;
+                  height: 48px;
+                  border-radius: 50%;
+                  margin-right: 5px;
+                " />
+                        <button class="btn-share fontsize-14 fw-600 text-start" style="width: 88%">
+                            Share what you are learning these days
+                        </button>
+                    </div>
+                    <div class="mt-1 mb-1 d-flex justify-content-center text-white">
+                        <button class="btn btn-dark fw-600 me-4 no-border">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="skyblue"
+                                class="bi bi-image" viewBox="0 0 16 16">
+                                <path d="M6.002 5.5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z" />
+                                <path
+                                    d="M2.002 1a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2h-12zm12 1a1 1 0 0 1 1 1v6.5l-3.777-1.947a.5.5 0 0 0-.577.093l-3.71 3.71-2.66-1.772a.5.5 0 0 0-.63.062L1.002 12V3a1 1 0 0 1 1-1h12z" />
+                            </svg>
+                            &nbsp; Photo
+                        </button>
+                        <button class="btn btn-dark fw-600 me-4 no-border">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="#7FC15E"
+                                class="bi bi-play-btn-fill" viewBox="0 0 16 16">
+                                <path
+                                    d="M0 12V4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm6.79-6.907A.5.5 0 0 0 6 5.5v5a.5.5 0 0 0 .79.407l3.5-2.5a.5.5 0 0 0 0-.814l-3.5-2.5z" />
+                            </svg>
+                            &nbsp; Video
+                        </button>
+                        <button class="btn btn-dark fw-600 me-4 no-border">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="orange"
+                                class="bi bi-calendar-date" viewBox="0 0 16 16">
+                                <path
+                                    d="M6.445 11.688V6.354h-.633A12.6 12.6 0 0 0 4.5 7.16v.695c.375-.257.969-.62 1.258-.777h.012v4.61h.675zm1.188-1.305c.047.64.594 1.406 1.703 1.406 1.258 0 2-1.066 2-2.871 0-1.934-.781-2.668-1.953-2.668-.926 0-1.797.672-1.797 1.809 0 1.16.824 1.77 1.676 1.77.746 0 1.23-.376 1.383-.79h.027c-.004 1.316-.461 2.164-1.305 2.164-.664 0-1.008-.45-1.05-.82h-.684zm2.953-2.317c0 .696-.559 1.18-1.184 1.18-.601 0-1.144-.383-1.144-1.2 0-.823.582-1.21 1.168 textcen.21.633 0 1.16.398 1.16 1.23z" />
+                                <path
+                                    d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4H1z" />
+                            </svg>
+                            &nbsp; Event
+                        </button>
+                        <button class="btn btn-dark fw-600 no-border tex">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="pink"
+                                class="bi bi-table" viewBox="0 0 16 16">
+                                <path
+                                    d="M0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2zm15 2h-4v3h4V4zm0 4h-4v3h4V8zm0 4h-4v3h3a1 1 0 0 0 1-1v-2zm-5 3v-3H6v3h4zm-5 0v-3H1v2a1 1 0 0 0 1 1h3zm-4-4h4V8H1v3zm0-4h4V4H1v3zm5-3v3h4V4H6zm4 4H6v3h4V8z" />
+                            </svg>
+                            &nbsp; Write article
+                        </button>
+                    </div>
+                </div>
+
+                <hr />
+
+                <div class="card mt-2" style="background-color: #1d2226">
+                    <div class="ms-3 mt-2">
+                        <div class="d-flex justify-content-start">
+                            <img src="assets/frknsprnl.png" alt="" style="
+                    width: 48px;
+                    height: 48px;
+                    border-radius: 50%;
+                    margin-right: 10px;
+                  " />
+                            <span class="text-white fontsize-14 fw-600">Furkan Süpürenel
+                                <span class="text-secondary fw-bold"> · 1st</span> <br />
+                                <span class="text-secondary fontsize-12">Web Developer</span></span>
+                        </div>
+                        <div class="mt-2">
+                            <span class="text-white fontsize-14">Selamlar! LinkedIn Clone çalışmamı bitirmek üzereyim!
+                                <br />
+                                ( Siz bunu okuyorsanız çoktan bitmiş demektir 😊 )
+                            </span>
+                        </div>
+                    </div>
+                    <div class="mt-3 mb-3">
+                        <img src="https://picsum.photos/id/901/535/300" alt="" width="535" height="300" />
+                    </div>
+                    <div class="mt-1 mb-1 d-flex justify-content-center text-white"
+                        style="border-top: #38434f 1px solid">
+                        <button class="btn btn-dark fw-600 me-5">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="18" fill="currentColor"
+                                class="bi bi-hand-thumbs-up" viewBox="0 0 16 16">
+                                <path
+                                    d="M8.864.046C7.908-.193 7.02.53 6.956 1.466c-.072 1.051-.23 2.016-.428 2.59-.125.36-.479 1.013-1.04 1.639-.557.623-1.282 1.178-2.131 1.41C2.685 7.288 2 7.87 2 8.72v4.001c0 .845.682 1.464 1.448 1.545 1.07.114 1.564.415 2.068.723l.048.03c.272.165.578.348.97.484.397.136.861.217 1.466.217h3.5c.937 0 1.599-.477 1.934-1.064a1.86 1.86 0 0 0 .254-.912c0-.152-.023-.312-.077-.464.201-.263.38-.578.488-.901.11-.33.172-.762.004-1.149.069-.13.12-.269.159-.403.077-.27.113-.568.113-.857 0-.288-.036-.585-.113-.856a2.144 2.144 0 0 0-.138-.362 1.9 1.9 0 0 0 .234-1.734c-.206-.592-.682-1.1-1.2-1.272-.847-.282-1.803-.276-2.516-.211a9.84 9.84 0 0 0-.443.05 9.365 9.365 0 0 0-.062-4.509A1.38 1.38 0 0 0 9.125.111L8.864.046zM11.5 14.721H8c-.51 0-.863-.069-1.14-.164-.281-.097-.506-.228-.776-.393l-.04-.024c-.555-.339-1.198-.731-2.49-.868-.333-.036-.554-.29-.554-.55V8.72c0-.254.226-.543.62-.65 1.095-.3 1.977-.996 2.614-1.708.635-.71 1.064-1.475 1.238-1.978.243-.7.407-1.768.482-2.85.025-.362.36-.594.667-.518l.262.066c.16.04.258.143.288.255a8.34 8.34 0 0 1-.145 4.725.5.5 0 0 0 .595.644l.003-.001.014-.003.058-.014a8.908 8.908 0 0 1 1.036-.157c.663-.06 1.457-.054 2.11.164.175.058.45.3.57.65.107.308.087.67-.266 1.022l-.353.353.353.354c.043.043.105.141.154.315.048.167.075.37.075.581 0 .212-.027.414-.075.582-.05.174-.111.272-.154.315l-.353.353.353.354c.047.047.109.177.005.488a2.224 2.224 0 0 1-.505.805l-.353.353.353.354c.006.005.041.05.041.17a.866.866 0 0 1-.121.416c-.165.288-.503.56-1.066.56z" />
+                            </svg>
+                            Like
+                        </button>
+                        <button class="btn btn-dark fw-600 me-5">
+                            <svg xmlns=" http://www.w3.org/2000/svg" width="20" height="18" fill="currentColor"
+                                class="bi bi-card-text" viewBox="0 0 16 16">
+                                <path
+                                    d="M14.5 3a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-.5.5h-13a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5h13zm-13-1A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2h-13z" />
+                                <path
+                                    d="M3 5.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zM3 8a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9A.5.5 0 0 1 3 8zm0 2.5a.5.5 0 0 1 .5-.5h6a.5.5 0 0 1 0 1h-6a.5.5 0 0 1-.5-.5z" />
+                            </svg>
+                            Comment
+                        </button>
+                        <button class="btn btn-dark fw-600 me-5">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="18" fill="currentColor"
+                                class="bi bi-arrow-90deg-right" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                    d="M14.854 4.854a.5.5 0 0 0 0-.708l-4-4a.5.5 0 0 0-.708.708L13.293 4H3.5A2.5 2.5 0 0 0 1 6.5v8a.5.5 0 0 0 1 0v-8A1.5 1.5 0 0 1 3.5 5h9.793l-3.147 3.146a.5.5 0 0 0 .708.708l4-4z" />
+                            </svg>
+                            Share
+                        </button>
+                        <button class="btn btn-dark fw-600">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="18" fill="currentColor"
+                                class="bi bi-send" viewBox="0 0 16 16">
+                                <path
+                                    d="M15.854.146a.5.5 0 0 1 .11.54l-5.819 14.547a.75.75 0 0 1-1.329.124l-3.178-4.995L.643 7.184a.75.75 0 0 1 .124-1.33L15.314.037a.5.5 0 0 1 .54.11ZM6.636 10.07l2.761 4.338L14.13 2.576 6.636 10.07Zm6.787-8.201L1.591 6.602l4.339 2.76 7.494-7.493Z" />
+                            </svg>
+                            Send
+                        </button>
+                    </div>
+                </div>
+
+                <div class="card mt-2" style="background-color: #1d2226">
+                    <div class="ms-3 mt-2">
+                        <div class="d-flex justify-content-start">
+                            <img src="assets/frknsprnl.png" alt="" style="
+                    width: 48px;
+                    height: 48px;
+                    border-radius: 50%;
+                    margin-right: 10px;
+                  " />
+                            <span class="text-white fontsize-14 fw-600">Furkan Süpürenel
+                                <span class="text-secondary fw-bold"> · 1st</span> <br />
+                                <span class="text-secondary fontsize-12">Web Developer</span></span>
+                        </div>
+                        <div class="mt-2">
+                            <span class="text-white fontsize-14">Selamlar! LinkedIn Clone çalışmamı bitirmek üzereyim!
+                                <br />
+                                ( Siz bunu okuyorsanız çoktan bitmiş demektir 😊 )
+                            </span>
+                        </div>
+                    </div>
+                    <div class="mt-3 mb-3">
+                        <img src="https://picsum.photos/id/2/535/300" alt="" width="535" height="300" />
+                    </div>
+                    <div class="mt-1 mb-1 d-flex justify-content-center text-white"
+                        style="border-top: #38434f 1px solid">
+                        <button class="btn btn-dark fw-600 me-5">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="18" fill="currentColor"
+                                class="bi bi-hand-thumbs-up" viewBox="0 0 16 16">
+                                <path
+                                    d="M8.864.046C7.908-.193 7.02.53 6.956 1.466c-.072 1.051-.23 2.016-.428 2.59-.125.36-.479 1.013-1.04 1.639-.557.623-1.282 1.178-2.131 1.41C2.685 7.288 2 7.87 2 8.72v4.001c0 .845.682 1.464 1.448 1.545 1.07.114 1.564.415 2.068.723l.048.03c.272.165.578.348.97.484.397.136.861.217 1.466.217h3.5c.937 0 1.599-.477 1.934-1.064a1.86 1.86 0 0 0 .254-.912c0-.152-.023-.312-.077-.464.201-.263.38-.578.488-.901.11-.33.172-.762.004-1.149.069-.13.12-.269.159-.403.077-.27.113-.568.113-.857 0-.288-.036-.585-.113-.856a2.144 2.144 0 0 0-.138-.362 1.9 1.9 0 0 0 .234-1.734c-.206-.592-.682-1.1-1.2-1.272-.847-.282-1.803-.276-2.516-.211a9.84 9.84 0 0 0-.443.05 9.365 9.365 0 0 0-.062-4.509A1.38 1.38 0 0 0 9.125.111L8.864.046zM11.5 14.721H8c-.51 0-.863-.069-1.14-.164-.281-.097-.506-.228-.776-.393l-.04-.024c-.555-.339-1.198-.731-2.49-.868-.333-.036-.554-.29-.554-.55V8.72c0-.254.226-.543.62-.65 1.095-.3 1.977-.996 2.614-1.708.635-.71 1.064-1.475 1.238-1.978.243-.7.407-1.768.482-2.85.025-.362.36-.594.667-.518l.262.066c.16.04.258.143.288.255a8.34 8.34 0 0 1-.145 4.725.5.5 0 0 0 .595.644l.003-.001.014-.003.058-.014a8.908 8.908 0 0 1 1.036-.157c.663-.06 1.457-.054 2.11.164.175.058.45.3.57.65.107.308.087.67-.266 1.022l-.353.353.353.354c.043.043.105.141.154.315.048.167.075.37.075.581 0 .212-.027.414-.075.582-.05.174-.111.272-.154.315l-.353.353.353.354c.047.047.109.177.005.488a2.224 2.224 0 0 1-.505.805l-.353.353.353.354c.006.005.041.05.041.17a.866.866 0 0 1-.121.416c-.165.288-.503.56-1.066.56z" />
+                            </svg>
+                            Like
+                        </button>
+                        <button class="btn btn-dark fw-600 me-5">
+                            <svg xmlns=" http://www.w3.org/2000/svg" width="20" height="18" fill="currentColor"
+                                class="bi bi-card-text" viewBox="0 0 16 16">
+                                <path
+                                    d="M14.5 3a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-.5.5h-13a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5h13zm-13-1A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2h-13z" />
+                                <path
+                                    d="M3 5.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zM3 8a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9A.5.5 0 0 1 3 8zm0 2.5a.5.5 0 0 1 .5-.5h6a.5.5 0 0 1 0 1h-6a.5.5 0 0 1-.5-.5z" />
+                            </svg>
+                            Comment
+                        </button>
+                        <button class="btn btn-dark fw-600 me-5">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="18" fill="currentColor"
+                                class="bi bi-arrow-90deg-right" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                    d="M14.854 4.854a.5.5 0 0 0 0-.708l-4-4a.5.5 0 0 0-.708.708L13.293 4H3.5A2.5 2.5 0 0 0 1 6.5v8a.5.5 0 0 0 1 0v-8A1.5 1.5 0 0 1 3.5 5h9.793l-3.147 3.146a.5.5 0 0 0 .708.708l4-4z" />
+                            </svg>
+                            Share
+                        </button>
+                        <button class="btn btn-dark fw-600">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="18" fill="currentColor"
+                                class="bi bi-send" viewBox="0 0 16 16">
+                                <path
+                                    d="M15.854.146a.5.5 0 0 1 .11.54l-5.819 14.547a.75.75 0 0 1-1.329.124l-3.178-4.995L.643 7.184a.75.75 0 0 1 .124-1.33L15.314.037a.5.5 0 0 1 .54.11ZM6.636 10.07l2.761 4.338L14.13 2.576 6.636 10.07Zm6.787-8.201L1.591 6.602l4.339 2.76 7.494-7.493Z" />
+                            </svg>
+                            Send
+                        </button>
+                    </div>
+                </div>
+
+                <div class="card mt-2" style="background-color: #1d2226">
+                    <div class="ms-3 mt-2">
+                        <div class="d-flex justify-content-start">
+                            <img src="assets/frknsprnl.png" alt="" style="
+                    width: 48px;
+                    height: 48px;
+                    border-radius: 50%;
+                    margin-right: 10px;
+                  " />
+                            <span class="text-white fontsize-14 fw-600">Furkan Süpürenel
+                                <span class="text-secondary fw-bold"> · 1st</span> <br />
+                                <span class="text-secondary fontsize-12">Web Developer</span></span>
+                        </div>
+                        <div class="mt-2">
+                            <span class="text-white fontsize-14">Selamlar! LinkedIn Clone çalışmamı bitirmek üzereyim!
+                                <br />
+                                ( Siz bunu okuyorsanız çoktan bitmiş demektir 😊 )
+                            </span>
+                        </div>
+                    </div>
+                    <div class="mt-3 mb-3">
+                        <img src="https://picsum.photos/id/412/535/300" alt="" width="535" height="300" />
+                    </div>
+                    <div class="mt-1 mb-1 d-flex justify-content-center text-white"
+                        style="border-top: #38434f 1px solid">
+                        <button class="btn btn-dark fw-600 me-5">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="18" fill="currentColor"
+                                class="bi bi-hand-thumbs-up" viewBox="0 0 16 16">
+                                <path
+                                    d="M8.864.046C7.908-.193 7.02.53 6.956 1.466c-.072 1.051-.23 2.016-.428 2.59-.125.36-.479 1.013-1.04 1.639-.557.623-1.282 1.178-2.131 1.41C2.685 7.288 2 7.87 2 8.72v4.001c0 .845.682 1.464 1.448 1.545 1.07.114 1.564.415 2.068.723l.048.03c.272.165.578.348.97.484.397.136.861.217 1.466.217h3.5c.937 0 1.599-.477 1.934-1.064a1.86 1.86 0 0 0 .254-.912c0-.152-.023-.312-.077-.464.201-.263.38-.578.488-.901.11-.33.172-.762.004-1.149.069-.13.12-.269.159-.403.077-.27.113-.568.113-.857 0-.288-.036-.585-.113-.856a2.144 2.144 0 0 0-.138-.362 1.9 1.9 0 0 0 .234-1.734c-.206-.592-.682-1.1-1.2-1.272-.847-.282-1.803-.276-2.516-.211a9.84 9.84 0 0 0-.443.05 9.365 9.365 0 0 0-.062-4.509A1.38 1.38 0 0 0 9.125.111L8.864.046zM11.5 14.721H8c-.51 0-.863-.069-1.14-.164-.281-.097-.506-.228-.776-.393l-.04-.024c-.555-.339-1.198-.731-2.49-.868-.333-.036-.554-.29-.554-.55V8.72c0-.254.226-.543.62-.65 1.095-.3 1.977-.996 2.614-1.708.635-.71 1.064-1.475 1.238-1.978.243-.7.407-1.768.482-2.85.025-.362.36-.594.667-.518l.262.066c.16.04.258.143.288.255a8.34 8.34 0 0 1-.145 4.725.5.5 0 0 0 .595.644l.003-.001.014-.003.058-.014a8.908 8.908 0 0 1 1.036-.157c.663-.06 1.457-.054 2.11.164.175.058.45.3.57.65.107.308.087.67-.266 1.022l-.353.353.353.354c.043.043.105.141.154.315.048.167.075.37.075.581 0 .212-.027.414-.075.582-.05.174-.111.272-.154.315l-.353.353.353.354c.047.047.109.177.005.488a2.224 2.224 0 0 1-.505.805l-.353.353.353.354c.006.005.041.05.041.17a.866.866 0 0 1-.121.416c-.165.288-.503.56-1.066.56z" />
+                            </svg>
+                            Like
+                        </button>
+                        <button class="btn btn-dark fw-600 me-5">
+                            <svg xmlns=" http://www.w3.org/2000/svg" width="20" height="18" fill="currentColor"
+                                class="bi bi-card-text" viewBox="0 0 16 16">
+                                <path
+                                    d="M14.5 3a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-.5.5h-13a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5h13zm-13-1A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2h-13z" />
+                                <path
+                                    d="M3 5.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zM3 8a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9A.5.5 0 0 1 3 8zm0 2.5a.5.5 0 0 1 .5-.5h6a.5.5 0 0 1 0 1h-6a.5.5 0 0 1-.5-.5z" />
+                            </svg>
+                            Comment
+                        </button>
+                        <button class="btn btn-dark fw-600 me-5">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="18" fill="currentColor"
+                                class="bi bi-arrow-90deg-right" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                    d="M14.854 4.854a.5.5 0 0 0 0-.708l-4-4a.5.5 0 0 0-.708.708L13.293 4H3.5A2.5 2.5 0 0 0 1 6.5v8a.5.5 0 0 0 1 0v-8A1.5 1.5 0 0 1 3.5 5h9.793l-3.147 3.146a.5.5 0 0 0 .708.708l4-4z" />
+                            </svg>
+                            Share
+                        </button>
+                        <button class="btn btn-dark fw-600">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="18" fill="currentColor"
+                                class="bi bi-send" viewBox="0 0 16 16">
+                                <path
+                                    d="M15.854.146a.5.5 0 0 1 .11.54l-5.819 14.547a.75.75 0 0 1-1.329.124l-3.178-4.995L.643 7.184a.75.75 0 0 1 .124-1.33L15.314.037a.5.5 0 0 1 .54.11ZM6.636 10.07l2.761 4.338L14.13 2.576 6.636 10.07Zm6.787-8.201L1.591 6.602l4.339 2.76 7.494-7.493Z" />
+                            </svg>
+                            Send
+                        </button>
+                    </div>
+                </div>
+            </article>
+            <!-- Article End -->
+            <div class="col-sm-3">
+                <div class="card" style="width: 20rem; background-color: #1d2226">
+                    <div class="card-body">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="#FFFFFFBF"
+                            class="bi bi-info-square-fill float-end" viewBox="0 0 16 16">
+                            <path
+                                d="M0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2zm8.93 4.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588zM8 5.5a1 1 0 1 0 0-2 1 1 0 0 0 0 2z" />
+                        </svg>
+                        <h5 class="card-title text-white fontsize-16">
+                            Add to your feed
+                        </h5>
+                    </div>
+                    <div class="ms-3 mb-3 d-flex justify-content-start">
+                        <img src="/assets/hakanyalcinkaya.jpg" alt=""
+                            style="border-radius: 50%; width: 48px; height: 48px" />
+                        <a href="https://www.linkedin.com/in/hakanyalcinkaya/?originalSubdomain=tr"
+                            class="no-decoration" target="_blank">
+                            <span class="text-white ms-2 fontsize-14 fw-600">Hakan Yalcinkaya <br />
+                                <span class="text-secondary fontsize-12 ms-2">Python (Django) & React Developer</span>
+                                <button class="btn btn-follow border-white fw-600 fontsize-16 mt-2">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white"
+                                        class="bi bi-check-lg" viewBox="0 0 16 16">
+                                        <path
+                                            d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z" />
+                                    </svg>
+                                    Following
+                                </button>
+                            </span>
+                        </a>
+                    </div>
+                    <div class="ms-3 mb-3 d-flex justify-content-start">
+                        <img src="/assets/kodluyoruz.jpg" alt=""
+                            style="border-radius: 50%; width: 48px; height: 48px" />
+                        <a href="" class="no-decoration">
+                            <span class="text-white ms-2 fontsize-14 fw-600">Kodluyoruz <br />
+                                <span class="text-secondary fontsize-12 ms-2">IT Services and IT
+                                    Consulting</span><button
+                                    class="btn btn-follow border-white fw-600 fontsize-16 mt-2">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white"
+                                        class="bi bi-plus-lg" viewBox="0 0 16 16">
+                                        <path fill-rule="evenodd"
+                                            d="M8 2a.5.5 0 0 1 .5.5v5h5a.5.5 0 0 1 0 1h-5v5a.5.5 0 0 1-1 0v-5h-5a.5.5 0 0 1 0-1h5v-5A.5.5 0 0 1 8 2Z" />
+                                    </svg>
+                                    Follow
+                                </button></span>
+                        </a>
+                    </div>
+                    <div class="ms-3 mb-3 d-flex justify-content-start">
+                        <img src="/assets/linkedin.png" alt="" style="border-radius: 50%; width: 48px; height: 48px" />
+                        <span class="text-white ms-2 fontsize-14 fw-600">LinkedIn <br />
+                            <span class="text-secondary fontsize-12">Internet Publishing <br /></span><button
+                                class="btn btn-follow border-white fw-600 fontsize-16 mt-2">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white"
+                                    class="bi bi-plus-lg" viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd"
+                                        d="M8 2a.5.5 0 0 1 .5.5v5h5a.5.5 0 0 1 0 1h-5v5a.5.5 0 0 1-1 0v-5h-5a.5.5 0 0 1 0-1h5v-5A.5.5 0 0 1 8 2Z" />
+                                </svg>
+                                Follow
+                            </button></span>
+                    </div>
+                    <div class="mb-3 ms-2">
+                        <button class="btn btn-dark" style="padding: 0 5px">
+                            View all recommendations
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white"
+                                class="bi bi-arrow-right" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                    d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+                <div class="card mt-2" style="width: 20rem; background-color: #1d2226">
+                    <a href="https://www.linkedin.com/jobs/?trk=li_FA_global_careers_jobsgtm_jsFA_v1&mcid=6899045044465016833"
+                        target="_blank">
+                        <img src="https://media.licdn.com/media/AAYQAgTPAAgAAQAAAAAAADVuOvKzTF-3RD6j-qFPqhubBQ.png"
+                            alt="" style="width: 19rem; margin-left: 7px" />
+                    </a>
+                </div>
+
+                <div class="mt-3 text-center" style="width: 20rem">
+                    <a href="https://about.linkedin.com/"
+                        class="text-gray-light fontsize-12 no-decoration me-2">About</a>
+                    <a href="https://www.linkedin.com/accessibility?lipi=urn%3Ali%3Apage%3Ad_flagship3_feed%3BSyMiOd9fTeS0VmMI03%2B4ZQ%3D%3D"
+                        class="text-gray-light fontsize-12 no-decoration me-2">Accessibility</a>
+                    <a href="https://www.linkedin.com//help/linkedin?trk=footer_d_flagship3_feed&lipi=urn%3Ali%3Apage%3Ad_flagship3_feed%3BSyMiOd9fTeS0VmMI03%2B4ZQ%3D%3D"
+                        class="text-gray-light fontsize-12 no-decoration">Help Center <br /></a>
+                    <a href="https://www.linkedin.com/static?key=privacy_policy&lipi=urn%3Ali%3Apage%3Ad_flagship3_feed%3BSyMiOd9fTeS0VmMI03%2B4ZQ%3D%3D"
+                        class="text-gray-light fontsize-12 no-decoration me-2">Privacy & Terms</a>
+                    <a href="https://www.linkedin.com/help/linkedin/answer/62931?lipi=urn%3Ali%3Apage%3Ad_flagship3_feed%3BSyMiOd9fTeS0VmMI03%2B4ZQ%3D%3D"
+                        class="text-gray-light fontsize-12 no-decoration">Ad Choices <br /></a>
+                    <a href="https://www.linkedin.com/ad/start?trk=n_nav_ads_rr&lipi=urn%3Ali%3Apage%3Ad_flagship3_feed%3BSyMiOd9fTeS0VmMI03%2B4ZQ%3D%3D"
+                        class="text-gray-light fontsize-12 no-decoration me-2">Advertising</a>
+                    <a href="https://business.linkedin.com/talent-solutions?trk=flagship_nav&veh=li-header-dropdown-lts-control&src=li-nav"
+                        class="text-gray-light fontsize-12 no-decoration">Business Services <br /></a>
+                    <a href="" class="text-gray-light fontsize-12 no-decoration me-2">Get the LinkedIn app</a>
+                    <a href="" class="text-gray-light fontsize-12 no-decoration">More</a>
+                </div>
+                <div class="mt-2 text-center" style="width: 20rem">
+                    <img src="assets/linkedincorp.png" alt="" width="250" />
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
