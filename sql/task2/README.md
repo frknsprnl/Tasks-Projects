@@ -1,5 +1,8 @@
 ## <a href="https://github.com/frknsprnl/Tasks-Projects/blob/master/sql/dvd-rental-sample-database-diagram.png?raw=true"> DVD-Rental Sample Database </a>
 
+### **Task 2:** BETWEEN, IN  
+--- 
+
 Aşağıdaki sorgu senaryolarını dvdrental örnek veri tabanı üzerinden gerçekleştiriniz.
 
 - Film tablosunda bulunan tüm sütunlardaki verileri replacement cost değeri 12.99 dan büyük eşit ve 16.99 küçük olma koşuluyla sıralayınız. > ( BETWEEN - AND yapısını kullanınız.)

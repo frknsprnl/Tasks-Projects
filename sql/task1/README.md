@@ -1,5 +1,8 @@
 ## <a href="https://github.com/frknsprnl/Tasks-Projects/blob/master/sql/dvd-rental-sample-database-diagram.png?raw=true"> DVD-Rental Sample Database </a>
 
+### **Task 1:** SELECT, FROM, WHERE, AND, OR, NOT 
+--- 
+
 Aşağıdaki sorgu senaryolarını dvdrental örnek veri tabanı üzerinden gerçekleştiriniz.
 
 - Film tablosunda bulunan title ve description sütunlarındaki verileri sıralayınız.

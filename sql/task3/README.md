@@ -1,5 +1,8 @@
 ## <a href="https://github.com/frknsprnl/Tasks-Projects/blob/master/sql/dvd-rental-sample-database-diagram.png?raw=true"> DVD-Rental Sample Database </a>
 
+### **Task 3:** LIKE, ILIKE
+--- 
+
 Aşağıdaki sorgu senaryolarını dvdrental örnek veri tabanı üzerinden gerçekleştiriniz.
 
 - Country tablosunda bulunan country sütunundaki ülke isimlerinden 'A' karakteri ile başlayıp 'a' karakteri ile sonlananları sıralayınız.

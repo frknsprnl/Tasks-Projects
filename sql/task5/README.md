@@ -1,5 +1,8 @@
 ## <a href="https://github.com/frknsprnl/Tasks-Projects/blob/master/sql/dvd-rental-sample-database-diagram.png?raw=true"> DVD-Rental Sample Database </a>
 
+### **Task 5:**  ORDER BY DESC/ASC, LIMIT, OFFSET
+--- 
+
 Aşağıdaki sorgu senaryolarını dvdrental örnek veri tabanı üzerinden gerçekleştiriniz.
 
 - Film tablosunda bulunan ve film ismi (title) 'n' karakteri ile biten en uzun (length) 5 filmi sıralayınız.
