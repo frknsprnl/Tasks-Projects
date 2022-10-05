@@ -1,7 +1,11 @@
---SELECT country FROM country WHERE country LIKE 'A%a';
+--q1
+SELECT country FROM country WHERE country LIKE 'A%a';
 
---SELECT country FROM country WHERE country LIKE '%_____n';
+--q2
+SELECT country FROM country WHERE country LIKE '%_____n';
 
---SELECT title FROM film WHERE title ILIKE '%t%t%t%t%';
+--q3
+SELECT title FROM film WHERE title ILIKE '%t%t%t%t%';
 
---SELECT * FROM film WHERE title LIKE 'C%' AND length > 90 AND rental_rate = 2.99;
+--q4
+SELECT * FROM film WHERE title LIKE 'C%' AND length > 90 AND rental_rate = 2.99;
