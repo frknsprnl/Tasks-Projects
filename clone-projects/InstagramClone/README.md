@@ -1,4 +1,9 @@
-# instagrambootstrapclone
-Simple HTML Instagram clone made with Bootstrap. (Responsive design)
+# InstagramClone
 
-https://instagramclonefs.netlify.app/
+### **https://instagramclonefs.netlify.app/**
+
+<br>
+
+|           Desktop View            |           Mobile View            |
+| :-------------------------------: | :------------------------------: |
+| ![image](./IGDesktopView.png)     | ![image](./IGMobileView.png) |
