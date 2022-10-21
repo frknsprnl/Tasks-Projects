@@ -2,649 +2,360 @@
 <html lang="en">
 
 <head>
-    <!-- Kodluyoruz Clone project using Bootstrap5.1 -->
-    <!-- Made with ❤ by Furkan Süpürenel  -->
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Kodluyoruz Clone</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous" />
-    <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css" />
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kodluyoruz</title>
+    <script src="https://kit.fontawesome.com/f63e70a0c2.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
-    <header>
-        <p class="position-absolute font-medium text-gray ms-2">
-            Kodluyoruz Websitesi Clone Çalışmasıdır. Made with ❤ by Furkan Süpürenel
-            <a href="https://github.com/frknsprnl" target="_blank" class="bi bi-github"></a>
-        </p>
-        <div class="mx-auto px-4">
-            <div class="d-flex justify-content-between align-items-center py-3">
-                <img style="height: 40px; width: 193.54px" class="start-0"
-                    src="https://cdn.sanity.io/images/9kdepi1d/production/65c832d202a503b15d99e628f4313782f3ef50db-300x62.png"
-                    alt="Kodluyoruz" />
-                <div class="d-flex justify-content-between align-items-center" style="min-width: 190px">
-                    <a class="d-inline-flex justify-content-center align-items-center px-1 pt-1 navbar-items"
-                        href="https://www.kodluyoruz.org/kodla-donusturelim" target="_blank">Kodla Dönüştürelim</a>
-                    <a class="ms-3 d-inline-flex align-items-center px-1 pt-1 navbar-items"
-                        href="https://www.kodluyoruz.org/hi-kod" target="_blank">Hi-Kod</a>
-                    <a class="ms-3 d-inline-flex align-items-center px-1 pt-1 navbar-items"
-                        href="https://www.kodluyoruz.org/bootcamp" target="_blank">Bootcamp</a>
-                    <a class="ms-3 d-inline-flex align-items-center px-1 pt-1 navbar-items"
-                        href="https://www.kodluyoruz.org/community" target="_blank">Topluluk</a>
-                    <a class="ms-3 d-inline-flex align-items-center px-1 pt-1 navbar-items"
-                        href="https://www.kodluyoruz.org/cs50" target="_blank">CS50x</a>
-                    <a class="ms-3 d-inline-flex align-items-center px-1 pt-1 navbar-items"
-                        href="https://www.kodluyoruz.org/kodluyoruz-junior" target="_blank">Kodluyoruz Jr.</a>
-                    <a class="ms-3 d-inline-flex align-items-center px-1 pt-1 navbar-items"
-                        href="https://www.kodluyoruz.org/for-companies" target="_blank">Şirketler</a>
-                    <a class="ms-3 d-inline-flex align-items-center px-1 pt-1 navbar-items"
-                        href="https://www.kodluyoruz.org/about" target="_blank">Hakkımızda</a>
-                </div>
-                <div class="row d-flex justify-content-center align-items-center">
-                    <div class="col-md-6">
-                        <a href="https://www.kodluyoruz.org/donate/" target="_blank"
-                            class="btn-donate font-medium ms-auto">Destekle</a>
-                    </div>
+    <div>
+        <header class="flex p-4 justify-between items-center whitespace-nowrap sticky top-0 z-10 bg-white shadow-sm shadow-slate-300">
+            <div class="">
+                <img src="https://cdn.sanity.io/images/9kdepi1d/production/65c832d202a503b15d99e628f4313782f3ef50db-300x62.png"
+                    alt="cover image" class="h-5
+                md:h-8 lg:h-10 xl:h-12">
+            </div>
 
-                    <div class="col-md-6">
-                        <select class="form-select text-sm text-gray font-medium" style="border: none; width: 70px">
-                            <option value="1">TR</option>
-                        </select>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </header>
+            <nav class="hidden gap-x-6 lg:flex ">
+                <a href="" class="flex items-center hover:text-blue-500">
+                    Öğren &nbsp;
+                    <i class="fa-solid fa-angle-down"></i>
+                </a>
+                <a href="" class="flex items-center hover:text-blue-500">
+                    Topluluk &nbsp;
+                    <i class="fa-solid fa-angle-down"></i>
+                </a>
+                <a href="" class="hover:text-blue-500">Etkinlikler</a>
+                <a href="" class="flex items-center hover:text-blue-500">
+                    Kodluyoruz Jr. &nbsp;
+                    <i class="fa-solid fa-angle-down"></i>
+                </a>
+                <a href="" class="hover:text-blue-500">Hakkımızda</a>
+                <a href="" class="hover:text-blue-500">Bize Katıl</a>
+            </nav>
+            <a href="" class="hover:text-blue-500 md:hidden"><i class="fa-solid fa-bars"></i></a>
 
-    <section>
-        <img alt="" style="
-          position: relative;
-          background-position: center;
-          opacity: 0.99;
-          background-repeat: no-repeat;
-          width: 100%;
-          height: 100%;
-          object-fit: cover;
-          object-position: center;
-          background-image: linear-gradient(
-              to bottom,
-              rgba(45, 156, 219, 0.6),
-              rgba(155, 81, 224, 0.6)
-            ),
-            url('https://cdn.sanity.io/images/9kdepi1d/production/81188239f6ad3b9b8547a87e64dc3a140829026a-2048x1365.jpg?w=1500&h=1000&fit=crop&fm=webp');
-          width: 100%;
-          height: 570px;
-          background-size: cover;
-        " />
-        <div class="centered col-md-12 text-center mt-5">
-            <h2 class="col-md-12 text-white font-extrabold">
-                Hayalindeki yazılım kariyerine ilk adımı at
-            </h2>
-            <div class="col-md-12 text-center">
-                <p class="text-white text-lg font-medium">
-                    Türkiye'yi teknolojide bir yetenek merkezi yapmak için gençlere
-                    ihtiyaçları olan eğitimi sağlıyoruz.
-                </p>
-            </div>
-            <div class="col-md-12 text-center mt-5">
-                <a href="https://www.kodluyoruz.org/bootcamp" target="_blank" class="btn-apply">BAŞVUR</a>
-            </div>
-        </div>
-    </section>
-    <div class="container">
-        <div class="col-md-12 text-center text-4x1 font-extrabold mt-5">
-            Kodluyoruz Nasıl Çalışır?
-        </div>
-        <div class="row mt-5 text-center">
-            <div class="col-md-4">
-                <img class="mini-img"
-                    src="https://cdn.sanity.io/images/9kdepi1d/production/294d797750d6b6b1a0e00fa8ab122997db92549e-863x574.svg?w=240&h=160&fit=crop&fm=webp"
-                    alt="" />
-                <h4 class="mt-5">Becerilerini Geliştir</h4>
-                <p class="font-thin">
-                    Ücretsiz bootcamp'lere katıl ve dünya çapındaki kaynaklarla
-                    becerilerini geliştir
-                </p>
-                <div class="mt-5">
-                    <a href="https://www.kodluyoruz.org/bootcamp" target="_blank" class="mini-btn">Başvur</a>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <img class="mini-img"
-                    src="https://cdn.sanity.io/images/9kdepi1d/production/6a5ed2a57036cbd99732311d8558882d2eaa6717-1088x826.svg?w=240&h=182&fit=crop&fm=webp"
-                    alt="" />
-                <h4 class="mt-5">Mezunlar Kulübü'ne Katıl</h4>
-                <p class="font-thin">
-                    Bootcamp'lerden başarıyla mezun ol, diğer mezunlarla hayat boyu
-                    öğrenmek için bir araya gel
-                </p>
-                <div class="mt-5">
-                    <a href="https://www.kodluyoruz.org/community" target="_blank" class="mini-btn">Kulüp Hakkında</a>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <img class="mini-img"
-                    src="https://cdn.sanity.io/images/9kdepi1d/production/a0d5d919e567c1ca122529eea4a6350ac2997198-926x749.svg?w=240&h=194&fit=crop&fm=webp"
-                    alt="" />
-                <h4 class="mt-5">Şirketlerle Buluş</h4>
-                <p class="font-thin">
-                    Hayalindeki kariyere adım atmak isteyen mezunlarımız için
-                    sağladığımız desteklerden yararlan
-                </p>
-                <div class="mt-5">
-                    <a href="https://www.kodluyoruz.org/for-companies" target="_blank" class="mini-btn">Şirketlerle
-                        Çalışmalarımız</a>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="col-md-12 py-10 gradient mt-5">
-        <h2 class="text-center text-white font-extrabold tracking-tight text-4x1">
-            Açık kaynaklarımız burada!
-        </h2>
-        <div>
-            <p class="text-center text-white font-thin">
-                Israrlara dayanamadık, iyi bir teknoloji kariyerine hazırlanmak
-                isteyenler için ücretsiz ve online kaynaklar oluşturduk.
-                Patikalarımızda sizleri bekliyoruz!
-            </p>
-        </div>
-        <div class="text-center mt-5 mb-5">
-            <a href="https://www.patika.dev/" target="_blank"
-                class="btn-prep text-base rounded-full shadow font-medium">Patika.Dev'de Bootcamp'lere Hazırlan</a>
-        </div>
-    </div>
-    <div class="col-md-12 mt-5">
-        <div>
-            <h2 class="text-center font-extrabold tracking-tight text-4x1">
-                Eşitlik
-            </h2>
-
-            <p class="text-center text-xl text-gray">
-                Potansiyeli yüksek ve sosyoekonomik ihtiyacı olan gençlere ücretsiz
-                eğitim sağlıyoruz
-            </p>
-        </div>
-        <div class="container mt-5">
-            <div class="row shadow py-10 col-md-12">
-                <div class="col-md-4 border-end">
-                    <div class="font-extrabold text-5x1 text-center">%80</div>
-                    <p class="text-gray text-lg font-medium text-center mt-2">
-                        Bootcamp'lerden ortalama mezuniyet oranı
-                    </p>
-                </div>
-                <div class="col-md-4 border-end">
-                    <div class="font-extrabold text-5x1 text-center">%45</div>
-                    <p class="text-gray text-lg font-medium text-center mt-2">
-                        Kadın öğrenci oranımız - Eşitliği destekliyoruz!
-                    </p>
-                </div>
-                <div class="col-md-4">
-                    <div class="font-extrabold text-5x1 text-center">%60</div>
-                    <p class="text-gray text-lg font-medium text-center mt-2">
-                        Mezun olduktan sonra 3 ay içinde işe yerleşme oranı
-                    </p>
-                </div>
-            </div>
-        </div>
-
-        <div class="col-md-12 py-10 gradient mt-5">
-            <h2 class="text-center text-white font-extrabold tracking-tight text-4x1">
-                Kodluyoruz'la Hayatı Değişenler
-            </h2>
-            <div class="col-md-12 row d-flex text-center mt-5 mb-5">
-                <div class="col-md-6">
-                    <iframe frameborder=" 0" allowfullscreen="1"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        title="YouTube video player" width="470" height="300"
-                        src="https://www.youtube.com/embed/2gZ-lx3oI5s?autoplay=0&amp;enablejsapi=1&amp;origin=https%3A%2F%2Fwww.kodluyoruz.org&amp;widgetid=1"
-                        id="widget2">
-                    </iframe>
-                </div>
-                <div class="col-md-6">
-                    <iframe frameborder="0" allowfullscreen="1"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        title="YouTube video player" width="470" height="300"
-                        src="https://www.youtube.com/embed/9UlvqXwUti8?autoplay=0&amp;enablejsapi=1&amp;origin=https%3A%2F%2Fwww.kodluyoruz.org&amp;widgetid=3"
-                        id="widget4">
-                    </iframe>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="bg-gray-100 py-10 d-flex justify-content-center">
-        <div class="row container mt-5 d-flex justify-content-center">
-            <div class="col-md-6 d-flex justify-content-center">
-                <div class="col-md-6">
-                    <a href="https://blogs.worldbank.org/jobs/meet-3-young-leaders-tackling-youth-unemployment"
-                        target="_blank">
-                        <img class="w-64"
-                            src="https://cdn.sanity.io/images/9kdepi1d/production/9c2a1d71c4df16363ee34090fe6498617a512797-929x236.png?auto=format"
-                            alt="" />
+            <div class="flex gap-x-3 md:gap-x-6 mr-2 py-3">
+                <div>
+                    <a href=""
+                        class="bg-orange-400 hover:bg-blue-900 text-white py-2 px-4 md:py-3 md:px-6 rounded-3xl font-medium text-sm shadow-lg shadow-gray-400">
+                        Destekle
                     </a>
-                    <a href="https://hbrturkiye.com/blog/egitim-sistemlerinin-donusen-ekonomiye-yetismesinin-yollari"
-                        target="_blank">
-                        <img class="w-64"
-                            src="https://cdn.sanity.io/images/9kdepi1d/production/9c3a8d329f6070e6e5c2a0efd9e13259e6ec1842-575x341.png?auto=format"
-                            alt="" />
+                </div>
+                <div>
+                    <a href="" class="hover:text-blue-500">
+                        TR &nbsp;
+                        <i class="fa-solid fa-angle-down"></i>
                     </a>
-                    <a href="https://webrazzi.com/2017/01/27/kodluyoruz-org-kod-okuryazarligini-yazilimci-istihamini-hizlandiran-sosyal-girisim/"
-                        target="_blank">
-                        <img class="w-64"
-                            src="https://cdn.sanity.io/images/9kdepi1d/production/9e26741887f8fcdd7badcdab2111d8d2fe315e4d-300x67.png?auto=format"
-                            alt="" />
+                </div>
+                <div>
+                    <a href="" class="hover:text-blue-500">
+                        <i class="fa-solid fa-magnifying-glass"></i>
                     </a>
-                    <div class="d-flex justify-content-center w-64">
-                        <a href="https://www.kodluyoruz.org/news" target="_blank" class="btn mini-btn shadow">Hakkımızda
-                            Haberler</a>
-                    </div>
                 </div>
             </div>
-            <div class="col-md-6 d-flex justify-content-center">
-                <iframe width="470" height="300" src="https://www.youtube.com/embed/ZX13KoNPSpw"
-                    title="YouTube video player" frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen></iframe>
-            </div>
-        </div>
-    </div>
-    <div class="mt-5">
-        <h2 class="text-center font-extrabold tracking-tight text-4x1">
-            Ödüller
-        </h2>
-        <p class="text-gray-500 text-sm-center mt-3">
-            Uluslararası ödüllerle Türkiye'yi temsil etmekten gurur duyuyoruz!
-        </p>
-    </div>
-    <div class="col-md-12 d-flex justify-content-center">
-        <img src="https://cdn.sanity.io/images/9kdepi1d/production/5c38145be5377a7cdc3a9e07aeb57ef324e3ecf3-1808x798.png?auto=format"
-            alt="" class="w-256" />
-    </div>
-    <div class="mt-5">
-        <h2 class="text-center font-extrabold tracking-tight text-4x1">
-            Destekçiler ve Partnerler
-        </h2>
-        <p class="text-gray-500 text-sm-center mt-3">
-            Kodluyoruz'u mümkün kılan tüm destekçi ve partnerlerimize teşekkürler!
-        </p>
-    </div>
-    <div class="container mt-5">
-        <div class="row d-flex justify-content-center mx-5">
-            <div class="col-md-2 align-items-center">
-                <a href="https://www.microsoft.com/en-us/">
-                    <img class="partners-img"
-                        src="https://cdn.sanity.io/images/9kdepi1d/production/0e4c0d2948408b89ddf105e62b646c5fcdef7ccf-2383x512.png?w=225&h=48&fit=crop&fm=webp"
-                        alt="" />
-                </a>
-                <a href="https://donate.tpfund.org/campaign/kodluyoruz/c242409">
-                    <img class="partners-img"
-                        src="https://cdn.sanity.io/images/9kdepi1d/production/1b15c4dae7a07d22ee0f2c077ee8b48c111b0771-1267x384.webp?w=225&h=68&fit=crop"
-                        alt="" />
-                </a>
-                <a href="https://www.gaziantepteknopark.com.tr/">
-                    <img class="partners-img"
-                        src="https://cdn.sanity.io/images/9kdepi1d/production/4c26e28c42c9ca5c76d3555efbcf789f22782a76-1406x418.png?w=225&h=67&fit=crop&fm=webp"
-                        alt="" />
-                </a>
-                <a href="https://www.wfp.org/countries/turkey">
-                    <img class="partners-img"
-                        src="https://cdn.sanity.io/images/9kdepi1d/production/1782b0069df3b07b99627ba284a4bb073d9846db-1056x464.png?w=225&h=99&fit=crop&fm=webp"
-                        alt="" />
-                </a>
-            </div>
+        </header>
 
-            <div class="col-md-2 align-items-center">
-                <a href="https://siviltoplumsektoru.org/en/">
-                    <img class="partners-img"
-                        src="https://cdn.sanity.io/images/9kdepi1d/production/ddf27311ad45970a8c3eb4cde11f87239278e071-5570x2231.png?w=225&h=90&fit=crop&fm=webp"
-                        alt="" />
-                </a>
-                <a href="https://empowerweb.org/">
-                    <img class="partners-img"
-                        src="https://cdn.sanity.io/images/9kdepi1d/production/aea61ecfaee8bf056ebb199aa441b30dd7df9ac4-1280x960.jpg?w=225&h=169&fit=crop&fm=webp"
-                        alt="" />
-                </a>
-                <a href="https://www.teblegirisim.com/">
-                    <img class="partners-img"
-                        src="https://cdn.sanity.io/images/9kdepi1d/production/ef6e7a2a0abe8b90641bd749de3a24c5a3bf2588-384x173.png?w=225&h=101&fit=crop&fm=webp"
-                        alt="" />
-                </a>
-                <a href="https://www.kas.de/en/home">
-                    <img class="partners-img"
-                        src="https://cdn.sanity.io/images/9kdepi1d/production/436fc90d7357d7322100850f7cfe175130f2e058-1647x503.png?w=225&h=69&fit=crop&fm=webp"
-                        alt="" />
-                </a>
-            </div>
+        <main>
+            <section class="relative">
+                    <img class="cover-img" src="" alt="">
 
-            <div class="col-md-2 align-items-center">
-                <a href="https://www.bsh-group.com/tr/">
-                    <img class="partners-img"
-                        src="https://cdn.sanity.io/images/9kdepi1d/production/66ad0573a7b61474f372e94b6d7ac915d56a86f8-640x197.png?w=225&h=69&fit=crop&fm=webp"
-                        alt="" />
-                </a>
-                <a href="https://baslangicnoktasi.org/">
-                    <img class="partners-img"
-                        src="https://cdn.sanity.io/images/9kdepi1d/production/f12b6c1e2df63c81a8324d72a28d0bd337358fad-752x487.png?w=225&h=146&fit=crop&fm=webp"
-                        alt="" />
-                </a>
-                <a href="https://www.ahika.gov.tr/">
-                    <img class="partners-img"
-                        src="https://cdn.sanity.io/images/9kdepi1d/production/78a33305038081f4923e0a29c0d39068cf60b9d7-550x368.jpg?w=225&h=151&fit=crop&fm=webp"
-                        alt="" />
-                </a>
+                    <div class="flex flex-col absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full">
 
-                <img class="partners-img" width="150" height="2015" style="object-fit: cover; object-position: center"
-                    src="https://cdn.sanity.io/images/9kdepi1d/production/ad8beb9c4714f2717d41bf7a430b1c55cd961c7e-780x10480.png?w=225&h=3023&fit=crop&fm=webp"
-                    alt="" />
-            </div>
-            <div class="col-md-2 align-items-center">
-                <a href="https://www.launchcode.org/">
-                    <img class="partners-img"
-                        src="https://cdn.sanity.io/images/9kdepi1d/production/fcfc2b4753f0c5bcf21bac5033f93e61c6e942fe-792x253.png?w=225&h=72&fit=crop&fm=webp"
-                        alt="" />
-                </a>
-                <a href="https://zeministanbul.ist/tr/">
-                    <img class="partners-img"
-                        src="https://cdn.sanity.io/images/9kdepi1d/production/a2090f88167b18274bcc29bb144dcae85e6d0f9e-1178x662.jpg?w=225&h=126&fit=crop&fm=webp"
-                        alt="" />
-                </a>
-                <a href="https://www.kavlak.av.tr/">
-                    <img class="partners-img"
-                        src="https://cdn.sanity.io/images/9kdepi1d/production/cd7984de3ed3908452c8bd5b6d37e543d9ab97a7-708x236.png?w=225&h=75&fit=crop&fm=webp"
-                        alt="" />
-                </a>
-                <a href="https://drc.ngo/">
-                    <img class="partners-img"
-                        src="https://cdn.sanity.io/images/9kdepi1d/production/d26a007cd7e072e1bac6bfb70140826c5d6bcbec-1289x666.png?w=225&h=116&fit=crop&fm=webp"
-                        alt="" />
-                </a>
-            </div>
-            <div class="col-md-2 align-items-center">
-                <a href="https://www.ilo.org/ankara/lang--tr/index.htm">
-                    <img class="partners-img"
-                        src="https://cdn.sanity.io/images/9kdepi1d/production/c46de7356fc1bfd7dd79c41b3e6240b5b6453047-895x393.png?w=225&h=99&fit=crop&fm=webp"
-                        alt="" />
-                </a>
-                <a href="https://www.ariteknokent.com.tr/tr">
-                    <img class="partners-img"
-                        src="https://cdn.sanity.io/images/9kdepi1d/production/d5f884697043829cdee2733e698cc70fee6e1305-595x170.png?w=225&h=64&fit=crop&fm=webp"
-                        alt="" />
-                </a>
-                <a href="https://talentgrid.io/?source=kodluyoruz">
-                    <img class="partners-img"
-                        src="https://cdn.sanity.io/images/9kdepi1d/production/ff13c2e696cbd417ea686675dc1eff586aa6153f-991x208.png?w=225&h=47&fit=crop&fm=webp"
-                        alt="" />
-                </a>
-                <a href="https://www.canpolatlegal.com/">
-                    <img class="partners-img"
-                        src="https://cdn.sanity.io/images/9kdepi1d/production/80d08cb39d851acab85fb192f6b9f31bd6f632e4-900x336.png?w=225&h=84&fit=crop&fm=webp"
-                        alt="" />
-                </a>
-            </div>
-            <div class="col-md-2 align-items-center">
-                <a href="https://www.westernunion.com/foundation/">
-                    <img class="partners-img"
-                        src="https://cdn.sanity.io/images/9kdepi1d/production/910cbeeda18adfe17ed8375e1b75939128752d76-1200x627.jpg?w=225&h=118&fit=crop&fm=webp"
-                        alt="" />
-                </a>
-                <a href="http://odtuteknokent.com.tr/tr">
-                    <img class="partners-img"
-                        src="https://cdn.sanity.io/images/9kdepi1d/production/1285c29af02ce6a2ba18b86c3dfc1f22a2b5f82e-500x167.png?w=225&h=75&fit=crop&fm=webp"
-                        alt="" />
-                </a>
-                <a href="https://www.uniaktivite.com/">
-                    <img class="partners-img"
-                        src="https://cdn.sanity.io/images/9kdepi1d/production/7136fc68290384ccdaca4727013d7f53442de68b-1228x273.png?w=225&h=50&fit=crop&fm=webp"
-                        alt="" />
-                </a>
-                <a href="https://www.ngn.com.tr/">
-                    <img class="partners-img"
-                        src="https://cdn.sanity.io/images/9kdepi1d/production/04393ff12c1e5d55dc79661f371814ec9740b4f8-1775x905.png?w=225&h=115&fit=crop&fm=webp"
-                        alt="" />
-                </a>
-            </div>
-        </div>
-    </div>
+                        <h1 class="text-6xl font-black mb-2 text-white text-center tracking-tighter">
+                            Hayalindeki yazılım kariyerine ilk adımı at
+                        </h1>
 
-    <div class="mt-5 bg-gray-100 py-10 col-md-12">
-        <div class="container">
-            <h2 class="text-center font-extrabold tracking-tight text-4x1">
-                Kodluyoruz Alchemist Podcast 🎧
-            </h2>
-            <p class="text-gray-500 text-sm-center mt-3">
-                Alchemist Podcast, teknoloji alanında dünyadaki önemli gelişmeleri ve
-                girişimleri sunan podcast kanalımız! İlk serimiz, Garanti BBVA
-                sponsorluğunda yapay zeka alanındaki gelişmeleri
-                <a class="text-decoration" href="https://www.kodluyoruz.org/ai-strategy/" target="_blank">
-                    Kodluyoruz Yapay Zeka Danışma Kurulu
-                </a>
-                üyeleri gözünden aktardığımız seri.
-            </p>
-            <div class="col-md-12 text-center">
-                <a href="https://open.spotify.com/show/1s3hWl6tMQYtkdihHP3Alq"
-                    class="btn mini-btn px-4 shadow font-extrabold" target="_blank" style="padding: 12px 24px">Hemen
-                    dinleyin</a>
-            </div>
-        </div>
-    </div>
+                        <h5 class="text-xl text-center text-white mt-10 md:mt-5 xl:mt-2">
+                            Türkiye’yi teknolojide bir yetenek merkezi yapmak için gençlere ihtiyaçları olan eğitimi
+                            sağlıyoruz.
+                        </h5>
 
-    <div class="gradient mt-5 py-1">
-        <p class="text-white d-flex justify-content-center" style="margin-top: 12px">
-            Kodluyoruz, Türkiye'yi teknoloji alanında dünya çapında bir merkez
-            yapmaya çalışan bir sosyal girişimdir.
-        </p>
-    </div>
+                        <div class="mx-auto mt-14 md:mt-10">
+                            <a href=""
+                            class="bg-orange-400 hover:bg-blue-900 text-white py-4 px-9 rounded-full font-thin text-lg shadow-lg shadow-gray-600">
+                            BAŞVUR
+                            </a>
+                        </div>
+                    </div>
+            </section>
 
-    <footer class="mt-5 bg-gray-100 pt-5">
-        <div class="container row mx-auto">
-            <div class="col-md-3">
-                <h4 class="text-sm font-semibold text-gray-400">MENÜ</h4>
-                <ul class="mt-3 no-bullets text-sm text-gray">
-                    <li class="mt-2">
-                        <a href="https://www.kodluyoruz.org/kodla-donusturelim" class="no-decoration text-gray"
-                            target="_blank">
-                            Kodla Dönüştürelim
-                        </a>
-                    </li>
-                    <li class="mt-2">
-                        <a href="https://www.kodluyoruz.org/hi-kod" class="no-decoration text-gray" target="_blank">
-                            Hi-Kod
-                        </a>
-                    </li>
-                    <li class="mt-2">
-                        <a href="https://www.kodluyoruz.org/bootcamp" class="no-decoration text-gray" target="_blank">
-                            Bootcamp
-                        </a>
-                    </li>
-                    <li class="mt-2">
-                        <a href="https://www.kodluyoruz.org/community" class="no-decoration text-gray" target="_blank">
-                            Topluluk
-                        </a>
-                    </li>
-                    <li class="mt-2">
-                        <a href="https://www.kodluyoruz.org/cs50" class="no-decoration text-gray" target="_blank">
-                            CS50X
-                        </a>
-                    </li>
-                    <li class="mt-2">
-                        <a href="https://www.kodluyoruz.org/kodluyoruz-junior" class="no-decoration text-gray"
-                            target="_blank">
-                            Kodluyoruz Jr.
-                        </a>
-                    </li>
-                    <li class="mt-2">
-                        <a href="https://www.kodluyoruz.org/for-companies" class="no-decoration text-gray"
-                            target="_blank">
-                            Şirketler
-                        </a>
-                    </li>
-                    <li class="mt-2 mb-4">
-                        <a href="https://www.kodluyoruz.org/about" class="no-decoration text-gray" target="_blank">
-                            Hakkımızda
-                        </a>
-                    </li>
-                </ul>
-            </div>
-            <div class="col-md-3">
-                <h4 class="text-sm font-semibold text-gray-400">BECERI GELIŞTIR</h4>
-                <ul class="mt-3 no-bullets text-sm text-gray">
-                    <li class="mt-2">
-                        <a class="no-decoration text-gray" href="https://www.kodluyoruz.org/resources" target="_blank">
-                            Kaynaklar
-                        </a>
-                    </li>
-                    <li class="mt-2">
-                        <a href="https://www.kodluyoruz.org/for-companies" target="_blank"
-                            class="no-decoration text-gray">
-                            Şirketler
-                        </a>
-                    </li>
-                    <li class="mt-2">
-                        <a href="https://www.kodluyoruz.org/ai-strategy" target="_blank"
-                            class="no-decoration text-gray">
-                            AI Stratejisi
-                        </a>
-                    </li>
-                    <li class="mt-2">
-                        <a href="https://www.kodluyoruz.org/bootcamp/admission" target="_blank"
-                            class="no-decoration text-gray">
-                            Seçim süreci
-                        </a>
-                    </li>
-                </ul>
-            </div>
-            <div class="col-md-3">
-                <h4 class="text-sm font-semibold text-gray-400">HAKKINDA</h4>
-                <ul class="mt-3 no-bullets text-sm text-gray">
-                    <li class="mt-2">
-                        <a href="https://www.kodluyoruz.org/about" class="no-decoration text-gray">
-                            Hakkında
-                        </a>
-                    </li>
-                    <li class="mt-2">
-                        <a href="https://www.kodluyoruz.org/jobs" class="no-decoration text-gray">
-                            Bize Katıl
-                        </a>
-                        !
-                    </li>
-                    <li class="mt-2">
-                        <a href="https://www.kodluyoruz.org/news" class="no-decoration text-gray">
-                            Haberler
-                        </a>
-                    </li>
-                    <li class="mt-2">
-                        <a href="https://www.kodluyoruz.org/donate" class="no-decoration text-gray">
-                            Destekle
-                        </a>
-                    </li>
-                    <li class="mt-2">
-                        <a href="https://www.kodluyoruz.org/faq" class="no-decoration text-gray">
-                            SSS
-                        </a>
-                    </li>
-                    <li class="mt-2">
-                        <a href="https://www.kodluyoruz.org/contact" class="no-decoration text-gray">
-                            İletişim
-                        </a>
-                    </li>
-                    <li class="mt-2">
-                        <a href="https://www.kodluyoruz.org/links" class="no-decoration text-gray">Kolay Erişim</a>
-                    </li>
-                </ul>
-            </div>
-            <div class="col-md-3 position-relative">
-                <img class="w-56 position-absolute top-0 end-0"
-                    src="https://res.cloudinary.com/danielkapper-com/image/upload/v1577156572/logo-one.png" alt="" />
-            </div>
-            <div class="mt-2 border-top mx-auto mb-2">
-                <div class="row mt-3">
-                    <p class="text-gray text-sm col-md-6">
-                        © 2020 Kodluyoruz
-                        <a class="text-gray"
-                            href="https://cdn.sanity.io/files/9kdepi1d/production/a9971b686af8f40fed30a4b2deba0c4fce31b5b7.pdf">Çerez
-                            Politikası</a>
-                        ,
-                        <a class="text-gray"
-                            href="https://cdn.sanity.io/files/9kdepi1d/production/d5b01329809f92dfbd03e6b103cb65c58d85fd9b.pdf">Kişisel
-                            Veriler Korunması Başvuru Formu</a>
-                    </p>
-                    <div class="col-md-6">
-                        <div class="row">
-                            <div class="col-md-1 ms-auto">
-                                <a href="https://www.facebook.com/kodluyoruztr/" class="footer-icon" target="_blank">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
-                                        class="bi bi-facebook" viewBox="0 0 16 16">
-                                        <path
-                                            d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z" />
-                                    </svg>
-                                </a>
-                            </div>
-                            <div class="col-md-1">
-                                <a href="https://www.instagram.com/kodluyoruz/" class="footer-icon" target="_blank">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
-                                        class="bi bi-instagram" viewBox="0 0 16 16">
-                                        <path
-                                            d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z" />
-                                    </svg>
-                                </a>
-                            </div>
-                            <div class="col-md-1">
-                                <a href="https://twitter.com/kodluyoruz" class="footer-icon" target="_blank">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
-                                        class="bi bi-twitter" viewBox="0 0 16 16">
-                                        <path
-                                            d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z" />
-                                    </svg>
-                                </a>
-                            </div>
-                            <div class="col-md-1">
-                                <a href="https://www.linkedin.com/company/kodluyoruz/" class="footer-icon"
-                                    target="_blank">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
-                                        class="bi bi-linkedin" viewBox="0 0 16 16">
-                                        <path
-                                            d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z" />
-                                    </svg>
-                                </a>
-                            </div>
-                            <div class="col-md-1">
-                                <a href="https://medium.com/kodluyoruz/ " class="footer-icon" target="_blank">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
-                                        class="bi bi-medium" viewBox="0 0 16 16">
-                                        <path
-                                            d="M9.025 8c0 2.485-2.02 4.5-4.513 4.5A4.506 4.506 0 0 1 0 8c0-2.486 2.02-4.5 4.512-4.5A4.506 4.506 0 0 1 9.025 8zm4.95 0c0 2.34-1.01 4.236-2.256 4.236-1.246 0-2.256-1.897-2.256-4.236 0-2.34 1.01-4.236 2.256-4.236 1.246 0 2.256 1.897 2.256 4.236zM16 8c0 2.096-.355 3.795-.794 3.795-.438 0-.793-1.7-.793-3.795 0-2.096.355-3.795.794-3.795.438 0 .793 1.699.793 3.795z" />
-                                    </svg>
-                                </a>
-                            </div>
-                            <div class="col-md-1">
-                                <a href="https://www.youtube.com/channel/UCSnIf-v95OSGIv9H7d2R2lw" class="footer-icon"
-                                    target="_blank">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
-                                        class="bi bi-youtube" viewBox="0 0 16 16">
-                                        <path
-                                            d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105-.009.104c-.05.572-.124 1.14-.235 1.558a2.007 2.007 0 0 1-1.415 1.42c-1.16.312-5.569.334-6.18.335h-.142c-.309 0-1.587-.006-2.927-.052l-.17-.006-.087-.004-.171-.007-.171-.007c-1.11-.049-2.167-.128-2.654-.26a2.007 2.007 0 0 1-1.415-1.419c-.111-.417-.185-.986-.235-1.558L.09 9.82l-.008-.104A31.4 31.4 0 0 1 0 7.68v-.123c.002-.215.01-.958.064-1.778l.007-.103.003-.052.008-.104.022-.26.01-.104c.048-.519.119-1.023.22-1.402a2.007 2.007 0 0 1 1.415-1.42c.487-.13 1.544-.21 2.654-.26l.17-.007.172-.006.086-.003.171-.007A99.788 99.788 0 0 1 7.858 2h.193zM6.4 5.209v4.818l4.157-2.408L6.4 5.209z" />
-                                    </svg>
-                                </a>
-                            </div>
-                            <div class="col-md-1">
-                                <a href="https://discord.com/invite/huVN948" class="footer-icon" target="_blank">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
-                                        class="bi bi-discord" viewBox="0 0 16 16">
-                                        <path
-                                            d="M13.545 2.907a13.227 13.227 0 0 0-3.257-1.011.05.05 0 0 0-.052.025c-.141.25-.297.577-.406.833a12.19 12.19 0 0 0-3.658 0 8.258 8.258 0 0 0-.412-.833.051.051 0 0 0-.052-.025c-1.125.194-2.22.534-3.257 1.011a.041.041 0 0 0-.021.018C.356 6.024-.213 9.047.066 12.032c.001.014.01.028.021.037a13.276 13.276 0 0 0 3.995 2.02.05.05 0 0 0 .056-.019c.308-.42.582-.863.818-1.329a.05.05 0 0 0-.01-.059.051.051 0 0 0-.018-.011 8.875 8.875 0 0 1-1.248-.595.05.05 0 0 1-.02-.066.051.051 0 0 1 .015-.019c.084-.063.168-.129.248-.195a.05.05 0 0 1 .051-.007c2.619 1.196 5.454 1.196 8.041 0a.052.052 0 0 1 .053.007c.08.066.164.132.248.195a.051.051 0 0 1-.004.085 8.254 8.254 0 0 1-1.249.594.05.05 0 0 0-.03.03.052.052 0 0 0 .003.041c.24.465.515.909.817 1.329a.05.05 0 0 0 .056.019 13.235 13.235 0 0 0 4.001-2.02.049.049 0 0 0 .021-.037c.334-3.451-.559-6.449-2.366-9.106a.034.034 0 0 0-.02-.019Zm-8.198 7.307c-.789 0-1.438-.724-1.438-1.612 0-.889.637-1.613 1.438-1.613.807 0 1.45.73 1.438 1.613 0 .888-.637 1.612-1.438 1.612Zm5.316 0c-.788 0-1.438-.724-1.438-1.612 0-.889.637-1.613 1.438-1.613.807 0 1.451.73 1.438 1.613 0 .888-.631 1.612-1.438 1.612Z" />
-                                    </svg>
-                                </a>
-                            </div>
+            <section class="px-10 pt-24 pb-16">
+                <div>
+                    <h2 class="text-center font-bold text-4xl tracking-tighter">Kodluyoruz Nasıl Çalışır?</h2>
+                </div>
+
+                <div class="flex flex-col items-center lg:flex-row lg:justify-evenly mt-8 px-16">
+                    <div class="flex flex-col items-center w-80 justify-center">
+                        <div>
+                            <img class="w-48" src="https://kodluyoruz.org/wp-content/uploads/2022/05/294d797750d6b6b1a0e00fa8ab122997db92549e-863x574-1.webp" alt="">
+                        </div>
+
+                        <div class="mt-6 text-center">
+                            <span class="text-2xl font-bold tracking-tighter">
+                                Kariyer patikanı seç ve yolculuğuna başla 🚀
+                            </span>
+                        </div>
+                        <div class="mt-4">
+                            <p class="text-base font-thin text-center tracking-normal grid gap-4 leading-7">İyi bir teknoloji kariyerine hazırlanmak isteyenler için ücretsiz ve online kaynaklar oluşturduk. Yol haritaları içeren patikalarımıza heman başlayın; Gelin hayallerinizi, geleceğinizi, geleceğimizi Kodla Dönüştürelim!</p>
+                        </div>    
+
+                        <div class="p-8">
+                            <a href="" class="gradient px-7 py-3 rounded-full text-white shadow-lg shadow-gray-400">Başvur</a>
+                        </div>
+                    </div>
+                    <div class="flex flex-col items-center w-80 justify-center">
+                        <div>
+                            <img class="w-48" src="https://kodluyoruz.org/wp-content/uploads/2022/05/6a5ed2a57036cbd99732311d8558882d2eaa6717-1088x826-1.webp" alt="">
+                        </div>
+
+                        <div class="mt-6 text-center">
+                            <span class="text-2xl font-bold tracking-tighter">
+                                Bootcamp’lere Katıl 
+                            </span>
+                        </div>
+                        <div class="mt-4">
+                            <p class="text-base font-thin text-center tracking-normal grid gap-4 leading-7">Partnerimiz kurumlar/şirketler ile ücretsiz programlar açıyoruz ve sektörde en çok aranan becerileri öğretiyoruz. Kodluyoruz Bootcamp’lerini başarıyla tamamla partner şirketlerde/kurumlarda doğrudan işe başla!</p>
+                        </div>    
+
+                        <div class="p-8">
+                            <a href="" class="gradient px-7 py-3 rounded-full text-white shadow-lg shadow-gray-400">Kulüp Hakkında</a>
+                        </div>
+                    </div>
+                    <div class="flex flex-col items-center w-80 justify-center">
+                        <div>
+                            <img class="w-48" src="https://kodluyoruz.org/wp-content/uploads/2022/05/a0d5d919e567c1ca122529eea4a6350ac2997198-926x749-1.webp" alt="">
+                        </div>
+
+                        <div class="mt-6 text-center">
+                            <span class="text-2xl font-bold tracking-tighter">
+                                Topluluğa Dahil Ol! 
+                            </span>
+                        </div>
+                        <div class="mt-4">
+                            <p class="text-base font-thin text-center tracking-normal grid gap-4 leading-7">Beraber öğrenmek isteyen yazılımcıları bir araya getirmek en sevdiğimiz iş. Kodluyoruz Topluluğu olarak, tüm Türkiye’deki gençlerle bildiklerini paylaşmak için meetup’lar, çalışma grupları, ve etkinlikler düzenliyoruz. Topluluk etkinliklerinde kapımız herkese açık!</p>
+                        </div>
+
+                        <div class="p-8">
+                            <a href="" class="gradient px-7 py-3 rounded-full text-white shadow-lg shadow-gray-400">Şirketlerle Çalışmalarımız</a>
                         </div>
                     </div>
                 </div>
+            </section>
+
+            <section class="pb-32 pt-16">
+                <div>
+                    <h2 class="text-center font-bold text-4xl tracking-tighter">Rakamlarla Kodluyoruz</h2>
+                </div>
+
+                <div class="mt-3">
+                    <h3 class="text-center font-normal text-gray-500 text-xl">Potansiyeli yüksek ve sosyoekonomik ihtiyacı olan gençlere ücretsiz eğitim sağlıyoruz</h3>
+                </div>
+
+                <div class="flex flex-col md:flex-row items-center mt-6 justify-center gap-8">
+                    <div class="bg-white p-6 flex flex-col text-center w-80 shadow-2xl shadow-gray-300">
+                        <span class="text-7xl font-black text-orange-400">80%</span>
+                        <span class="text-xl mt-2">Bootcamp’lerden ortalama mezuniyet oranı</span>
+                    </div>
+  
+                    <div class="bg-white p-6 flex flex-col text-center w-80 shadow-2xl shadow-gray-300">
+                        <span class="text-7xl font-black text-orange-400">%45</span>
+                        <span class="text-xl mt-2">Kadın Öğrenci Oranımız – Eşitliği destekliyoruz!</span>
+                    </div>
+  
+                    <div class="bg-white p-6 flex flex-col text-center w-80 shadow-2xl shadow-gray-300">
+                        <span class="text-7xl font-black text-orange-400">%60</span>
+                        <span class="text-xl mt-2">Mezun olduktan sonra 3 ay içerisinde işe yerleşme oranı</span>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section-gradient-bg">
+                <div class="p-16 text-center">
+                    <h2 class="text-white font-bold text-4xl tracking-tighter">Kodluyoruz'la Hayatı Değişenler</h2>
+                </div>
+
+                <div class="flex flex-col md:flex-row gap-10 items-center justify-center pb-40">
+                    <div class="w-full h-80 max-w-xs max-h-64 md:max-w-lg md:max-h-full">
+                        <iframe width="100%" height="100%" src="https://www.youtube.com/embed/2gZ-lx3oI5s" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+
+                    <div class="w-full h-80 max-w-xs max-h-64 md:max-w-lg md:max-h-full">
+                        <iframe width="100%" height="100%" src="https://www.youtube.com/embed/9UlvqXwUti8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </section>
+
+            <section class="py-20 px-10 flex flex-col md:flex-row justify-center items-center bg-gray-100">
+                <div class="flex flex-col justify-center items-center">
+                    <img class="w-48" src="https://kodluyoruz.org/wp-content/uploads/2022/05/theworldbank.png" alt="">
+                    <img class="w-48" src="https://kodluyoruz.org/wp-content/uploads/2022/05/harvardbr.png" alt="">
+                    <img class="w-48" src="https://kodluyoruz.org/wp-content/uploads/2022/05/webrazzi.png" alt="">
+
+                    <div class="p-8">
+                        <a href="" class="gradient px-7 py-3 rounded-full text-white shadow-lg shadow-gray-400">Hakkımızda Haberler</a>
+                    </div>
+                </div>
+
+                <div class="w-full h-80 max-w-xs max-h-64 md:max-w-lg md:max-h-full">
+                    <iframe width="100%" height="100%" src="https://www.youtube.com/embed/ZX13KoNPSpw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </section>
+
+            <section class="py-20 px-10 flex flex-col">
+                <div class="text-center">
+                    <h2 class="font-bold text-4xl tracking-tighter">Ödüller</h2>
+                </div>
+
+                <div class="mt-3">
+                    <h3 class="text-center font-normal text-gray-500 text-xl">Uluslararası ödüllerle Türkiye’yi temsil etmekten gurur duyuyoruz!</h3>
+                </div>
+
+                <div class="flex justify-center mt-4">
+                    <img class="awards-img" src="https://kodluyoruz.org/wp-content/uploads/2022/05/5c38145be5377a7cdc3a9e07aeb57ef324e3ecf3-1808x798-1.webp" alt="">
+                </div>
+            </section>
+
+            <section class="px-10 pt-10 pb-20 flex flex-col">
+                <div class="text-center">
+                    <h2 class="font-bold text-4xl tracking-tighter">Destekçiler ve Partnerler</h2>
+                </div>
+
+                <div class="mt-3">
+                    <h3 class="text-center font-normal text-gray-500 text-xl">Kodluyoruz’u mümkün kılan tüm destekçi ve partnerlerimize teşekkürler!</h3>
+                </div>
+
+                <div class="flex flex-wrap justify-center items-center mt-8 gap-4">
+                    <img class="w-40 partner-item" src="https://kodluyoruz.org/wp-content/uploads/2022/05/microsoft-e1652790811224.webp" alt="">
+                    <img class="w-40 partner-item" src="https://kodluyoruz.org/wp-content/uploads/2022/05/treur.webp" alt="">
+                    <img class="w-40 partner-item" src="https://kodluyoruz.org/wp-content/uploads/2022/05/bsh.webp" alt="">
+                    <img class="w-40 partner-item" src="https://kodluyoruz.org/wp-content/uploads/2022/05/launchcode.webp" alt="">
+                    <img class="w-40 partner-item" src="https://kodluyoruz.org/wp-content/uploads/2022/05/ilo.webp" alt="">
+                    <img class="w-40 partner-item" src="https://kodluyoruz.org/wp-content/uploads/2022/05/wu.webp" alt="">
+                    <img class="w-40 partner-item" src="https://kodluyoruz.org/wp-content/uploads/2022/05/tpf.png" alt="">
+                    <img class="w-40 partner-item" src="https://kodluyoruz.org/wp-content/uploads/2022/05/empower.png" alt="">
+                    <img class="w-40 partner-item" src="https://kodluyoruz.org/wp-content/uploads/2022/05/bn.png" alt="">
+                    <img class="w-40 partner-item" src="https://kodluyoruz.org/wp-content/uploads/2022/05/zeministanbul.png" alt="">
+                    <img class="w-40 partner-item" src="https://kodluyoruz.org/wp-content/uploads/2022/05/ituari.png" alt="">
+                    <img class="w-40 partner-item" src="https://kodluyoruz.org/wp-content/uploads/2022/05/odtutek.png" alt="">
+                    <img class="w-40 partner-item" src="https://kodluyoruz.org/wp-content/uploads/2022/05/teknopark.webp" alt="">
+                    <img class="w-40 partner-item" src="https://kodluyoruz.org/wp-content/uploads/2022/05/teb.png" alt="">
+                    <img class="w-40 partner-item" src="https://kodluyoruz.org/wp-content/uploads/2022/05/ahiler.png" alt="">
+                    <img class="w-40 partner-item" src="https://kodluyoruz.org/wp-content/uploads/2022/05/kavlak.png" alt="">
+                    <img class="w-40 partner-item" src="https://kodluyoruz.org/wp-content/uploads/2022/05/talentgrid.png" alt="">
+                    <img class="w-40 partner-item" src="https://kodluyoruz.org/wp-content/uploads/2022/05/uniactivity.png" alt="">
+                    <img class="w-40 partner-item" src="https://kodluyoruz.org/wp-content/uploads/2022/05/wfp.png" alt="">
+                    <img class="w-40 partner-item" src="https://kodluyoruz.org/wp-content/uploads/2022/05/kas.png" alt="">
+                    <img class="w-40 partner-item" src="https://kodluyoruz.org/wp-content/uploads/2022/05/1646081392549.jpg" alt="">
+                    <img class="w-40 partner-item" src="https://kodluyoruz.org/wp-content/uploads/2022/05/drc.png" alt="">
+                    <img class="w-40 partner-item" src="https://kodluyoruz.org/wp-content/uploads/2022/05/canpolat.png" alt="">
+                    <img class="w-40 partner-item" src="https://kodluyoruz.org/wp-content/uploads/2022/05/ngn.png" alt="">
+                </div>
+            </section>
+
+            <section class="py-8 px-10">
+                <div class="text-center">
+                    <h2 class="font-bold text-4xl tracking-tighter">Kodluyoruz Alchemist Podcast 🎧</h2>
+                </div>
+
+                <div class="mt-4 text-center">
+                    <span class="font-normal text-md">Alchemist Podcast, teknoloji alanında dünyadaki önemli gelişmeleri ve girişimleri sunan podcast kanalımız! İlk serimiz, Garanti BBVA sponsorluğunda yapay zeka alanındaki gelişmeleri Kodluyoruz Yapay Zeka Danışma Kurulu üyeleri gözünden aktardığımız seri.</span>
+                </div>
+
+                <div class="p-8 text-center">
+                    <a href="" class="gradient px-7 py-3 rounded-full text-white shadow-lg shadow-gray-400">Hemen Dinleyin</a>
+                </div>
+            </section>
+
+            <div class="py-7 px-10 text-center footer-gradient-bg">
+                <span class="text-white">Kodluyoruz, Türkiye’yi teknoloji alanında dünya çapında bir merkez yapmaya çalışan bir sosyal girişimdir.</span>
+            </div>
+        </main>
+
+        <footer class="px-6 lg:px-28 py-10 flex flex-col justify-start md:flex-row md:justify-between ">
+            <div class="flex flex-col md:flex-row justify-start gap-x-36 gap-y-8">
+                <div class="flex flex-col">
+                    <p class="text-gray-300 text-sm font-bold">MENÜ</p>
+                    <ul class="list-none mt-6 text-gray-400 text-sm">
+                        <li class="mt-2">Kodla Dönüştürelim</li>
+                        <li class="mt-2">Hi-kod</li>
+                        <li class="mt-2">Bootcamp</li>
+                        <li class="mt-2">Topluluk</li>
+                        <li class="mt-2">CS50x</li>
+                        <li class="mt-2">Kodluyoruz Jr.</li>
+                        <li class="mt-2">Şirketler Hakkımızda</li>
+                    </ul>
+                </div>
+
+                <div class="flex flex-col">
+                    <p class="text-gray-300 text-sm font-bold">BECERİ GELİŞTİR</p>
+                    <ul class="list-none mt-6 text-gray-400 text-sm">
+                        <li class="mt-2">Kaynaklar</li>
+                        <li class="mt-2">Şirketler</li>
+                        <li class="mt-2">AI Stratejisi</li>
+                        <li class="mt-2">Seçim Süreci</li>
+                    </ul>
+                </div>
+
+                <div class="flex flex-col">
+                    <p class="text-gray-300 text-sm font-bold">HAKKINDA</p>
+                    <ul class="list-none mt-6 text-gray-400 text-sm">
+                        <li class="mt-2">Hakkımızda</li>
+                        <li class="mt-2">Bize Katıl!</li>
+                        <li class="mt-2">Haberler</li>
+                        <li class="mt-2">Destekle</li>
+                        <li class="mt-2">SSS</li>
+                        <li class="mt-2">İletişim</li>
+                        <li class="mt-2">Kolay Erişim</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="pt-10">
+                <img src="https://kodluyoruz.org/wp-content/uploads/2022/05/kodluyoruz_yatay_slogan-1024x119.png"
+                    alt="cover image" class="h-6 md:h-5">
+            </div>
+
+        </footer>
+
+        <div class="mx-6 md:mx-28 border-t border-gray-200"></div>
+        
+        <div class="px-6 md:px-28 py-10 flex flex-col flex-wrap md:flex-row justify-between">
+            <p class="text-gray-300 text-sm">© 2020 Kodluyoruz Çerez Politikası, Kişisel Veriler Korunması Başvuru Formu</p>
+
+            <div class="flex gap-4 mr-0 mt-5 md:mt-0 md:mr-12 flex-wrap justify-center">
+                <div class="h-10 w-10">
+                    <a href="" class="rounded-full p-3 flex justify-center items-center hover:bg-red-500
+                    bg-transparent hover:text-white"><i class="fa-brands fa-youtube"></i></a>
+                </div>
+                <div class="h-10 w-10">
+                    <a href="" class="rounded-full p-3 flex justify-center items-center hover:bg-blue-600
+                    bg-transparent hover:text-white"><i class="fa-brands fa-facebook"></i></a>
+                </div>
+                <div class="h-10 w-10">
+                    <a href="" class="rounded-full p-3 flex justify-center items-center hover:bg-blue-500
+                    bg-transparent hover:text-white"><i class="fa-brands fa-twitter"></i></a>
+                </div>
+                <div class="h-10 w-10">
+                    <a href="" class="rounded-full p-3 flex justify-center items-center hover:bg-blue-900
+                    bg-transparent hover:text-white"><i class="fa-brands fa-linkedin"></i></a>
+                </div>
+                <div class="h-10 w-10">
+                    <a href="" class="rounded-full p-3 flex justify-center items-center hover:bg-blue-500
+                    bg-transparent hover:text-white"><i class="fa-brands fa-discord"></i></a>
+                </div> 
+                <div class="h-10 w-10">
+                    <a href="" class="rounded-full p-3 flex justify-center items-center hover:bg-black
+                    bg-transparent hover:text-white"><i class="fa-brands fa-medium"></i></a>
+                </div>
             </div>
         </div>
-    </footer>
+
+    </div>
 </body>
 
 </html>
