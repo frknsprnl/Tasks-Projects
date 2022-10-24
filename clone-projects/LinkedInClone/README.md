@@ -1,3 +1,9 @@
 # LinkedInClone
 
-https://linkedinclonefs.netlify.app/  (not responsive, for now)
+### **https://linkedinclonefs.netlify.app/**
+
+<br>
+
+|           Desktop View            |           Mobile View            |
+| :-------------------------------: | :------------------------------: |
+| ![image](./LinkedInDesktopView.png)     | ![image](./LinkedInMobileView.png) |
