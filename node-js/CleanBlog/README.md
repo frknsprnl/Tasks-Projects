@@ -1,6 +1,6 @@
 # Node JS Ödev 7-8-9-10-11-12: Clean Blog App
 
-https://cleanblogfs.herokuapp.com/
+### <pre><a href="https://cleanblog.glitch.me/">https://cleanblog.glitch.me/</a></pre>
 
 * Node JS
 * MongoDB 
