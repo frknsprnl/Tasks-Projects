@@ -52,7 +52,7 @@
 - <a href="https://github.com/frknsprnl/PatikaTasks/tree/master/node-js/WebServer"> Web Server </a>
 - <a href="https://github.com/frknsprnl/PatikaTasks/tree/master/node-js/KoaWebServer"> Koa Web Server </a>
 - <a href="https://github.com/frknsprnl/PatikaTasks/tree/master/node-js/CleanBlog"> Clean Blog Project </a>
--> Deploy: <a href="https://cleanblogfs.herokuapp.com/"> https://cleanblogfs.herokuapp.com/ </a>
+-> Deploy: <a href="https://cleanblog.glitch.me/"> https://cleanblog.glitch.me/ </a>
 
 ### <b> Data Types and Algorythm </b> <a href="https://github.com/frknsprnl/Tasks-Projects/tree/master/data-types-algorythms"><sub> Link </sub></a>
 
